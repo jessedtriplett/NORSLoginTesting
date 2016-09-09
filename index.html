@@ -30,11 +30,17 @@ form .field input{ color: #333; border-color: #ccc;}
 .login_box_inner{border:4px solid #395a81;box-shadow: 0 0 12px #3E81BB;}
 </style>
 
-<link rel="stylesheet" href="/suite/portal/css/standard_styles_static.css" type="text/css" />
-<link rel="stylesheet" href="/suite/portal/css/login.css" type="text/css" />
+<link rel="stylesheet" href="https://fccdev.appiancloud.com/suite/portal/css/standard_styles_static.css" type="text/css" />
+<link rel="stylesheet" href="https://fccdev.appiancloud.com/suite//portal/css/login.css" type="text/css" />
 
 
-  <div id= loginBox class="login_box notification_form ">
+
+
+<script src="https://fccdev.appiancloud.com/suite/tempo/tempo.nocache.js"></script>
+</head>
+<body onload="try{if(document.getElementsByName('un')[0].value.length>0) {document.getElementsByName('pw')[0].focus();} else { document.getElementsByName('un')[0].focus();}}catch(e){}" class="appian-body">
+
+<div id= loginBox class="login_box notification_form ">
     <div class="login_box_inner">
       <div class="login_logo">
 
@@ -43,18 +49,12 @@ form .field input{ color: #333; border-color: #ccc;}
            />
       </div>
       <form id="notification" class="">
-	  <appian-action processModelUuid="0003dd8f-bfee-8000-f92f-7f0000014e7a" />
         <div id="notificationText">Access the NORS System Below:
-
         <appian-action processModelUuid="0003dd8f-bfee-8000-f92f-7f0000014e7a" />
+		</div>
       </form>
-
-
-
-
-<script src="https://fccdev.appiancloud.com/suite/tempo/tempo.nocache.js"></script>
-</head>
-<body>
+	 </div>
+	</div>
 <!--
 <h1>Homepage Link Here v2.1</h1>
 <a href="https://fccdev.appiancloud.com/suite/tempo/tasks/PoQz1Q">Access homepage here</a>
