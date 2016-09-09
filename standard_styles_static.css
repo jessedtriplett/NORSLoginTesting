@@ -1,0 +1,6243 @@
+/*********************************
+ TOOLBAR
+*********************************/
+.asiToolbar{
+  font-size: 11px;
+  padding-left:13px;
+}
+*+html .asiToolbar{
+  display: inline-block;
+}
+.asiToolbar a, .asiToolbar label, .asiToolbar .separator, .asiToolbar .trigger{
+  margin-right:8px;
+}
+.asiToolbar .asiReportPalette .paletteQuickLinks a {
+  margin-right:0;
+}
+ 
+.asiToolbar *{
+  line-height:26px;
+}
+.asiToolbar .iBlueButton{
+  line-height:1em;
+}
+.asiToolbar label * {
+  vertical-align:middle;
+}
+.asiToolbar a, .asiToolbar span{
+  display: inline-block;
+  white-space:nowrap;
+}
+.asiToolbar a img {
+  margin-right:3px;
+  margin-bottom:3px;
+}
+*+html .asiToolbar a img{
+  margin-bottom: 0;
+}
+.asiToolbar .asiGridPaging{
+  text-align: right;  
+}
+.asiToolbar .asiPaletteTriggers{
+  float: right;
+}
+.asiToolbar .asiPaletteTriggers span.trigger{
+  padding-right:16px;
+}
+.asiToolbar h3{
+  display: inline;
+}
+*+html .asiToolbar h3{
+  /* IE7 has a different size for headings */
+  font-size: 13px;
+}
+.toolbarContent{
+  clear: both;
+}
+.gridToolbar{
+  clear:both;
+}
+
+.print .asiToolbar{
+  display: none;
+}
+.dialogSection h2 .asiToolbar{
+border:3px solid red;
+  margin: 0 0 0 -5px;
+}
+*>.dialogSection h2 .asiToolbar{
+  margin: 0;
+}
+/* Multiple Components */
+.asiDialog.fullWindow .asiToolbar{
+  min-height: 24px;
+  display: block;
+  margin: 0;
+}
+* html .asiDialog.fullWindow .asiToolbar{
+  height: 24px;
+}
+/** Activity chaining **/
+.asiToolbar a.back{
+  margin-right: 20px;
+}
+.asiToolbar a.next{
+  margin-left: 15px;
+}
+/** group type details **/
+.asiToolbar .move, .asiToolbar .maximize, .asiToolbar .minimize, .asiToolbar .restore{
+  float: right;
+  width: 10px;
+  padding: 2px 2px 0 0;
+  margin:0px;
+}
+.maximized .asiToolbar .restore, .minimized .asiToolbar .restore{
+  display: block;
+}
+.minimized .asiToolbar .minimize, .maximized .asiToolbar .maximize, .asiToolbar .restore{
+  display: none;
+}
+/** quick filter bar **/
+.quickFilterLabel span.toolbarFilterLabel{
+  margin-right: 3px;
+  font-weight: bold;
+}
+.quickFilterLabel a{
+  margin-left: 4px;
+  margin-right: 4px;
+}
+/*********************************
+ TOOLBAR
+*********************************/
+.asiToolbar .asiPaletteTriggers span{
+  cursor: pointer;
+}
+.asiToolbar{
+  background: #E8E8E8 url(../../components/toolbar/img/toolbar_bg.gif) scroll top left repeat;
+}
+.asiToolbar.top{
+  /*background: #E8E8E8 url(../../components/img/gridheader_bg.gif) scroll top left repeat-x;
+  border-bottom: 1px solid #CACACA;*/
+  background: #EEEEEE;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #CACACA;
+}
+.asiToolbar.top.noGradient{
+  background: #EEEEEE;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #CACACA;
+}
+.asiToolbar .move{
+  cursor: n-resize;
+  background: url(../../components/dialogs/img/move_blue.gif) top left  no-repeat;
+}
+.asiToolbar .maximize{
+  background: url(../../components/dialogs/img/maximize_blue.gif) top left no-repeat;
+}
+.asiToolbar .minimize{
+  background: url(../../components/dialogs/img/minimize_blue.gif) top left  no-repeat;
+}
+.asiToolbar .restore{
+  background: url(../../components/dialogs/img/restore_blue.gif) top left  no-repeat;
+}
+.asiDialog.fullWindow .asiToolbar{
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #bdd3e7;
+}
+.pagingBar{
+  background: #EEEEEE url(../../components/img/toolbar_bg.gif) scroll bottom left repeat-x;
+  border-top: 1px solid white;
+}
+.toolbarContent{
+  background: #EEEEEE url(../../components/img/toolbar_bg.gif) scroll bottom left repeat-x;
+}
+/* Reports Toolbar  */
+.asiToolbar .asiReportActions a:hover{
+  border-color:  white #a3a3a3 #a3a3a3 white;
+}
+.asiToolbar .asiPaletteTriggers .trigger{
+  background-image: url(../img/dropdown_black.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+/*********************************
+POP-UPS, DIALOG BOXES AND HEADERS
+*********************************/
+.asiDialog{
+  width: 660px;
+  z-index: 99;
+  position: absolute;
+}
+.asiDialog.small{
+  width: 400px;
+  height: 200px;
+}
+*>.asiDialog.small{
+  height: auto;
+  min-height: 200px;
+}
+.asiDialog.large{
+  width: 80%;
+  height: 417px;
+  position: absolute;
+}
+*>.asiDialog.large{
+  height: auto;
+  min-height: 200px;
+  position:absolute;
+  left:0px;
+}
+.asiDialog.inFront{
+  height: 500px;
+  z-index:110;
+  position:absolute;
+}
+.asiDialog .controls{
+  position: absolute;
+  top: 2px;
+  right: 0;
+  margin: 0 1px;
+  font-size: 10px;
+}
+.asiDialog .controls a{
+  float: right;
+  margin: 0;
+  padding: 0 2px;
+}
+.asiDialog h1{
+  font-size: 13px;
+  line-height: 27px;
+  padding: 0 10px;
+  margin: 0 0 10px;
+}
+.asiDialog.fullWindow{
+  position: static;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.asiDialog p{
+  text-align: center;
+}
+#asiAlert{
+  z-index: 5000;
+  width: 400px;
+  height: 150px;
+}
+*>#asiAlert{
+  height: auto;
+  min-height: 150px;
+  margin: 0 5px 15px;
+}
+#asiAlert h1{
+  margin: 0 0 20px;
+}
+#asiAlert p{
+  text-align: center;
+  margin: 0px 5px 20px;
+  line-height: 16px;
+}
+
+/* These are for the RichTextEditor's color picker */
+.asiDialog.colorPicker{
+  width: 240px;
+  height: 200px;
+}
+*>.asiDialog.colorPicker{
+  height: auto;
+  min-height: 200px;
+}
+.asiDialog.colorPicker h1{
+  margin-bottom: 0px; /* Remove spacing between header and content */
+}
+/*********************************
+POP-UPS, DIALOG BOXES AND HEADERS
+*********************************/
+.asiDialog{
+  color: black;
+  background-color: #fff;
+  border: 1px solid #2f2f2f;
+}
+.asiDialog .controls{
+  font-variant: normal;
+}
+.asiDialog .controls a{
+  border: none;
+}
+.asiDialog .controls .move{
+  cursor: move;
+}
+.asiDialog h1{
+  background: #373737 url(../../components/dialogs/img/header_bg.gif);
+  color: white;
+  font-weight: bold;
+  border: None;
+  cursor: move;
+}
+.asiDialog.fullWindow{
+  border:none;
+}
+/*********************************
+HIERARCHY COMPONENT
+*********************************/
+ul.asiHierarchy{
+  margin: 0 5px;
+}
+.asiHierarchy ul{
+  margin-left: 15px;
+}
+.asiHierarchy li{
+  text-indent: 0;
+  white-space: nowrap;
+  margin: 3px 0;
+}
+.asiHierarchyContainer{ 
+  overflow: auto;
+  overflow-y: hidden;
+  padding-bottom: 15px;
+}
+.asiHierarchy .hToggle img{
+  margin-right: 3px;
+}
+#mainNavigation .asiHierarchyContainer{
+  width: 198px;
+}
+#mainNavigation #dualHierarchyContainer{
+  width: 198px;
+  padding-bottom: 15px;
+  overflow: auto;
+  overflow-y: hidden;
+}
+#dualHierarchyContainer .asiHierarchyContainer{
+  overflow: visible;
+  overflow-y: visible;
+  width: auto;
+  padding-bottom: 0;
+}
+/*********************************
+HIERARCHY COMPONENT
+*********************************/
+#mainNavigation .asiHierarchy li a{
+  font-size: 11px;
+  color: black;
+}
+.asiDropdown{
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+.asiDropdown ul{
+  position: absolute;
+  display: none;
+  top: 0; /* Needed by Firefox */
+  left: 0; /* Needed by Firefox */
+  margin-top: 22px;
+}
+.asiDropdown li{
+  width: 150px;
+  padding: 1px 7px;
+}
+.asiDropdown li.thin{
+  width: 100px;
+}
+.asiDropdown.child ul{
+  margin-top: 0;
+  left: 150px;
+}
+.asiDropdown ul{
+  border: 1px solid #8c8a8c;
+}
+.asiDropdown li{
+  background-color: #efebef;
+  color: #333;
+}
+.asiDropdown li.hover, .asiDropdown li:hover{
+  background-color: #7b7d84;
+  color: #fff;
+}
+li.asiDropdown.child{
+  background: #efebef url(../../portal/img/nav_downarrow.gif) right no-repeat;
+}
+.suggestionDiv{
+  overflow: auto;  /* 'auto' by default for suggestiongrid, if not suggestion grid, the overflow is set by the autocomplete*/
+  z-index:10000;
+}
+.suggestionDiv div{
+  z-index:2;
+  font-size:11px;
+  text-align:left;
+  overflow:hidden;
+}
+.suggestionDiv div *{
+  padding:2px;
+}
+.suggestionDiv div a{
+  display:block;
+}
+.suggestionDiv div strong{
+  padding:0;
+}
+.innerSuggestionDiv{
+  overflow:hidden;
+  white-space:nowrap;
+}
+.innerSuggestionDiv a{
+  font-size:11px;
+}
+.suggestionDiv .innerSuggestionDiv.selected, .suggestionDiv .innerSuggestionDiv a:hover{
+  cursor: pointer;
+  z-index:2;
+}
+/**
+* This is for the browse icon if the autocomplete is lazy loaded.
+* The icon is pushed a little bit to the right of the input field.
+* T34359
+*/
+.pickerIcon{
+  margin-left:3px;
+}
+.suggestionDiv{
+  border: 1px solid black;
+  background: white;
+}
+.suggestionDiv .innerSuggestionDiv.selected, .suggestionDiv .innerSuggestionDiv a:hover{
+  color: white;
+  background: #789fbb;
+}
+/* 
+ * Show a yellow background when not in the normal autocomplete. For example, people
+ * nav or palette autocomplete.
+ */
+.innerSuggestionDiv strong {
+  background: #FFF25C;
+}
+/* 
+ * Don't show the background color in the inline autocomplete.
+ */
+.suggestionDiv .innerSuggestionDiv strong {
+  background: none;
+}
+.suggestionDiv .innerSuggestionDiv.picked a{
+  color:white;
+  background:#787878;
+}
+.asiPicker.v3 .quicklinks{
+  float:left;
+  width:490px;
+  margin:5px 5px 5px 0;
+}
+.asiPicker.v3 .asiBrowseDropdown{
+  width: 256px;
+}
+.asiPicker.v3 .createElements{
+  width:237px;
+  margin-left:3px;
+}
+.asiPicker.v3 .asiBrowseDropdown, .asiPicker.v3 .createElements {
+  float:left;
+  height:30px;
+  line-height:30px;
+}
+.asiPicker.v3 .asiBrowseDropdown *, .asiPicker.v3 .createElements * {
+  vertical-align:middle;
+}
+.asiPicker.v3 .asiBrowseDropdown select{
+  width: 90%;
+}
+.asiPicker.v3 .asiPickerSelector{
+  background:white;
+  overflow:auto;
+  overflow-x:hidden;
+  overflow-y:auto;
+  border:1px solid black;
+  width: 256px;
+  height:205px;
+  float:left;
+  margin:2px 15px 2px 0;
+  clear:left;
+  backface-visibility: hidden; /* Workaround for Chrome w/Retina Mac issue. https://bugs.chromium.org/p/chromium/issues/detail?id=420072 */
+}
+.asiPicker.v3 .asiPickerSelector .asiGridOuterContainer{
+  width:256px;
+  margin:4px 0 !important;
+}
+.asiPicker.v3 .asiPickerSelector .asiGridOuterContainer.scrollbarEnabled{
+  margin:0 !important;
+  width:240px;
+}
+.asiPicker.v3 .asiSearchResults .asiGridOuterContainer{
+  width:470px !important;
+}
+.asiPicker.v3 .asiPickerPreview{
+  background:white;
+  overflow: auto;
+  border: 1px solid black;
+  width:216px;
+  height: 205px;
+  margin: 2px 1px 2px 0;
+  float:left;
+}
+.asiPicker.v3 .asiPickerPreview img{
+  /*border: 1px solid black !important;*/
+  margin:10px 10px 10px 78px;
+  max-height:80px;
+  max-width:60px;
+}
+.asiPicker.v3 .asiPickerPreview div, .asiPicker.v3 .asiPickerPreview a{
+  font-size:11px !important;
+  text-align:left !important;
+  margin: 10px !important;
+}
+.asiPicker.v3 .asiPickerPreview .name{
+  font-weight: bold;
+}
+.asiPicker.v3 .drillable{
+  font-weight: bold;
+  cursor:pointer !important;
+  color: #4271c6;
+}
+.asiPicker.v3.asiGrid tr.selected td{
+  background-color: #ffff99 !important;
+}
+.asiPicker.v3 .asiGridTD0{
+  width:0 !important;
+}
+.asiPicker.v3 .asiGridInnerContainer{
+  border-bottom: 0;
+}
+.asiPicker.v3 .asiGrid tbody td{
+  border:0;
+}
+.asiPicker.v3 .pickerEntry{
+  float:left;
+}
+.asiPicker.v3 .selectLink{
+  float:right;
+}
+.asiPicker.v3 .asiSearchBox{
+  background:white;
+  overflow:auto;
+  border:1px solid black;
+  width: 487px;
+  height:230px;
+  float:left;
+  margin:10px 0 2px 0;
+  clear:left;
+}
+.asiPicker.v3 .asiSearchResults{
+  background:white;
+  overflow: auto;
+  border: 1px solid black;
+  width:487px;
+  height: 230px;
+  margin:10px 0 2px 0;
+  float:left;
+}
+div.calendar{
+  width: 310px; height:270px;
+  text-align: center;
+  position: relative;
+}
+/*
+*>.calendar{
+  width: auto;
+}
+*/
+iframe.calendar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.calendar .subheader{
+  padding-top: 7px;
+	border-bottom:4px solid #f6f6f6;	
+}
+.calendar select{
+  font-size: 11px;
+	width:75px;
+	overflow:hidden;
+	margin:3px;
+}
+.calendar .dateContainer{
+  width: 231px; height:161px;
+  margin: 5px auto;
+}
+.calendar .day, .calendar .date{
+  width: 33px;
+  line-height: 23px;
+  float: left;
+  text-align: center;
+	overflow:hidden;
+}
+.calendar .subheader img{
+  margin: 0 23px;
+}
+.calendar div.todayIsMsg{
+	height:13px; width:300px;
+	overflow:hidden;
+}
+/*********************************
+DROP-DOWN MENUS
+*********************************/
+.asiColorpicker {
+  width: 92px;
+  z-index: 1002;
+  padding: 1px;
+}
+.asiColorpicker a {
+  display: block;
+  float: left;
+  margin: .5px;
+  position: relative;
+  height: 11px;
+  width: 11px;
+  overflow: hidden;
+}
+div.datepicker{
+  width: 165px;
+  height:auto;
+  z-index: 10000;
+  text-align: center;
+  position: relative;
+}
+*>.datepicker{
+  width: auto;
+}
+.datepicker .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+iframe.datepicker{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 167px;
+	height:187px;
+  z-index: -1;
+	margin:-1px;
+}
+.datepicker .subheader{
+  margin-top: 20px;
+}
+.datepicker .close{
+  display: block;
+  text-align: right;
+}
+.datepicker select{
+  font-size: 11px;
+}
+.datepicker .dateContainer{
+  width: 133px;
+  margin: 5px auto;
+}
+.datepicker .day, .datepicker .date{
+  width: 19px;
+  line-height: 19px;
+  float: left;
+  text-align: center;
+}
+.datepicker .subheader img{
+	margin:-4px 3px 0 2px; 
+}
+.goUp{
+  cursor:pointer;
+  margin-left:5px;
+}
+.asiExpressionEditor{
+  position: absolute;
+  margin: 0;
+  width: 713px;
+  height: 550px !important;
+  font-size: 11px !important;
+  color: black;
+  border: 1px solid #2f2f2f;
+  padding: 0;
+}
+.expressionEditorTitleBar{
+  width:100%; 
+  border:1px solid white;
+  padding-top:2px;
+  padding-bottom:2px;
+  padding-left:5px;
+  font-size:12px;
+  font-weight:bold;
+  color:white;
+}
+.asiExpressionEditor .expEditorHeader{
+  float:left;
+  margin: 2px 2px 2px 8px; 
+  width: 70%;
+}
+.asiExpressionEditor .controls{
+  float:right;
+  margin: 2px 2px;
+  width: 10%;
+}
+.asiExpressionEditor .controls a{
+  border: none;
+  float: right;
+  margin: 0 5px 0 3px;
+  vertical-align: middle;
+  font-size: 11px;
+  color: white;
+  font-weight: normal;
+}
+.asiExpressionEditor .controls .move{
+  cursor: move;
+}
+.editorFooter{
+  float: right;
+  height: 35px;
+  text-align: right;
+  padding-top: 7px;
+  margin-right: 7px;
+}
+.expTextArea, .infoArea, #paletteArea{
+  border: 1px solid #000000;
+  background-color: white;
+  text-align:left;
+}
+/*Main content area*/
+#contentContainer{
+  background-color: transparent;
+  width: 100%;
+}
+/*Left side*/
+#paletteArea{
+  float: left;
+  margin: 7px;
+  padding: 0;
+  width: 245px;
+  height:457px;
+}
+.palette{
+  width:100%;
+  margin:0;
+  height: 424px;
+  background-color: white;
+  border: 0;
+  clear: both;
+  overflow: auto;
+}
+#parseWarning{
+  font-size: 9px;
+  display: none;
+}
+#rightSide{
+  float: left;
+  width: 430px;
+  margin: 7px 0;
+  padding: 0;
+}
+.expTextArea{
+  width: 100%;
+  height: 140px;
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 3px;
+}
+#saveRule{
+  clear:both;
+  text-align: right;
+}
+#operatorToolbar{
+  clear: both;
+  margin: 8px 0 10px;
+}
+#operatorToolbar img{
+  border: 2px outset #8cb2c6;
+}
+.validateButton{
+  float: right;
+}
+.infoArea{
+  float: left;
+  color: #333;
+  width: 100%;
+  height: 254px;
+  border: 1px solid #000000;
+  text-align:left;
+  overflow:auto;
+}
+.infoArea .name{
+  font-weight: bold;
+}
+.infoArea a{
+  cursor: help;
+}
+.infoArea .header{
+  background-color: #e7e7e7;
+  height: 37px;
+  padding: 5px;
+  overflow: auto;
+  border: 0;
+}
+.infoArea .header img{
+  float: left;
+  margin-right: 5px;
+  clear: left;
+}
+.infoArea .header p{
+  float: left;
+  width: 380px;
+  margin: 0;
+}
+.infoArea .header .name{
+  font-weight:bold;
+}
+.infoArea .details{
+  height: 207px;
+  background-color: white;
+  overflow: auto;
+  border: 0;
+}
+.infoArea .details .syntax .parameters{
+  font-style: italic;
+}
+.infoArea .details ul li{
+  padding: 5px 0;
+  text-align: right;
+  clear: both;
+}
+* html body .infoArea .details ul li label{
+  width:90px;
+}
+.infoArea .details ul li label{
+  float: left;
+  min-width: 90px;
+  font-weight: bold;
+}
+.infoArea .details ul li label a{
+  color: red;
+  margin-left: 2px;
+}
+.infoArea .details ul li.parameter label{
+  font-weight: bold;
+  font-style: italic;
+}
+.infoArea .details ul li span{
+  float: left;
+  clear: right;
+  text-align: left;
+  margin-left: 5px;
+  display: block;
+  width: 300px;
+}
+.infoArea .details ul li span span{
+  margin:0;
+  width:auto;
+}
+#functionsAutocomplete_EE{
+  width:180px;
+}
+#functionsAutocompleteContainer, #functionsHierarchyContainer{
+  overflow:auto;
+  height:377px;
+  padding:3px;
+}
+#functionsAutocompleteContainer div.innerSuggestionDiv a{
+  display:block;
+  height:15px;
+  padding:5px;
+}
+#functionsAutocompleteContainer div.innerSuggestionDiv a.selected{
+  background: #DCE3E8;
+  color: black;
+}
+
+#asiExpressionEditor #complexTypeHierarchy {
+  margin-left:3px;
+}
+
+#asiExpressionEditor #complexTypeHierarchy .topLabel{
+  padding-left: 2px;
+  font-size: 11px;
+}
+#asiExpressionEditor #complexTypeHierarchy .dataContext,
+#asiExpressionEditor #complexTypeHierarchy .processVariable, 
+#asiExpressionEditor #complexTypeHierarchy .activityClassParameter{
+  background: transparent url(../../components/expeditor/img/var.gif) 1px 3px no-repeat;
+  padding-left: 14px;
+  font-size: 11px;
+}
+#asiExpressionEditor #complexTypeHierarchy td {  
+  vertical-align:middle;
+}
+
+#asiExpressionEditor #varPalette .asiHierarchy li{
+  text-indent: 0;
+  white-space: nowrap;
+  margin: 3px 3px;
+}
+
+#asiExpressionEditor #varPalette .asiHierarchy ul{
+  padding-left:4px;
+}
+/*New Filter */
+.asiFilterIframe {
+  position: absolute;
+  height: 100%;
+  filter: alpha(Opacity: 0);
+  -moz-opacity:0;
+  opacity:0;
+}
+.asiFilterDiv{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../components/img/filter.gif);
+}
+.asiWaitFilter{
+  height: 120px;
+  width: 300px;
+  margin-top: 200px;
+}
+.asiForm {
+  font-size: 11px;
+}
+.asiForm fieldset{
+  padding: 0;
+}
+.asiForm li {
+  padding: 4px 2px;
+}
+.asiForm legend{
+  margin-right: 10px;
+  width: 40%;
+}
+.asiForm .legend{
+  width: 26%;
+  text-align: right;
+  float: left;
+}
+* html .asiForm .legend{
+  height: 15px;
+}
+.asiForm li.headerInfo{
+  padding-bottom: 3px;
+}
+.asiForm li.headerInfo legend{
+  font-size: 14px;
+  letter-spacing: .05em;
+  padding: 0 5px;
+}
+.asiForm .formInstructions{
+  padding: 0 13px;
+  text-align: left;
+}
+.asiForm li.lastHeaderItem{
+  margin-bottom: 5px;
+}
+.asiForm .fields{
+  padding-left: 15px;
+  float: left;
+  width: 62%;
+}
+.asiForm label span span, .asiForm .errorMessage, .errorMessage{
+  display: block;
+}
+.asiForm p.messageText{
+  width: 70% !important;
+  margin: 0 auto;
+  text-align: center;
+}
+.asiForm .errorMessage, .errorMessage{
+  display: block;
+  margin-bottom: 0;
+}
+.asiForm label {
+  display: block;
+}
+.asiForm .fields label span, .asiForm .fields label input{
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+*html .asiForm .fields label span.menuContainer{
+  vertical-align: top;
+}
+.asiForm p.instructions{ /* Deprecated */
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+  width: 98%;
+  text-align: left;
+}
+.asiForm p.fieldInstructions{
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+  width: 98%;
+  text-align: left;
+}
+.asiForm p.messageText, .messageText{
+  font-size: 11px;
+  width: 96%;
+  padding: 7px;
+}
+.asiForm textarea, .asiForm select, input.Picker, input.asiFormDate{
+  font-size: 11px;
+  width: 90%;
+}
+.asiForm textarea.paragraphsField{
+  height:150px;
+}
+.asiForm textarea{
+  height: 75px;
+}
+.asiForm .counter{
+  display: block;
+  white-space: nowrap;
+}
+input.asiFormDate, input.asiFormTime{
+  width: 70px;
+  height:16px;
+  padding-left:2px;
+}
+.asiForm input.Picker{
+  height: 15px;
+  padding-left: 2px;
+}
+.asiForm .iButtons, .asiDialog form .iButtons, .iButtons{
+  clear: both;
+  float: none;
+  width: auto;
+}
+.asiForm .outputMode label .value{
+  width: 98%;
+}
+.asiForm .outputMode label span,.asiForm span.outputMode{
+  padding: 2px 0;
+}
+.asiForm .requiredMessage{
+  margin: 10px 0 5px 10px;
+}
+.asiForm .detail{
+  display: block;
+  margin-left: 30px;
+  padding-bottom: 6px;
+  font-size: 10.5px;
+}
+#smpFormTop, #advanced, #simpleSearch, #advancedSearch{
+  margin-top: 30px;
+}
+.centerForm{
+  width: 600px;
+  min-height: 120px;
+  margin: 10px auto;
+  padding: 5px;
+}
+/*********************************
+  Helpbox
+*********************************/
+.asiForm .helpbox{
+  display: none;
+  position: absolute;
+  margin-top: 22px;
+  border: 1px solid blue;
+  z-index: 50;
+  width: 200px;
+  background-color: #e4f5f7;
+  border: 1px solid #04dfff;
+  padding: 5px;
+  text-align: left;
+  font-weight: normal;
+}
+.asiForm .questionBox{
+  margin-left: 8px;
+}
+/**
+* This is the "required star" for the "legend" (<div class="legend">)
+*/
+.requiredStar{
+  margin-right: 5px;
+  color: red;
+}
+/**
+* This is the "required star" for the "label" (<span class="label">)
+*/
+.labelRequiredStar{
+  margin-right: 2px;
+  margin-left: -8px;
+  color: red;
+}
+/*********************************
+ Compact Form Style
+*********************************/
+.compactForm .asiForm li{
+  padding: 1px 2px;
+}
+.compactForm .asiForm p.messageText{
+  padding: 3px 0 2px 0;
+  margin: 0 0 0 5px;
+}
+.compactForm .asiForm legend{
+  margin: 1px 0 0 0;
+  width: 27%;
+  text-align: right;
+}
+.compactForm .asiForm div.legend{
+  margin: 3px 0 0 3px;
+}
+.compactForm .asiForm p.messageText{
+  display: inline;
+}
+.compactForm .asiForm input.Picker, .asiDialog.small input.Picker{
+  width: 64%;
+  height: 15px;
+}
+/*Multiple Components*/
+.asiDialog .asiForm{
+  margin: 4px;
+}
+.asiPicker .asiForm textarea{
+  width: 150px;
+}
+.portletBody .asiForm fieldset, .portletBody .asiForm li, .portletBody .asiForm .fields{
+  position: static;
+}
+.personalizationGridForm .asiForm{
+	margin-top: 0;
+}
+.asiForm img.eeLink{
+	cursor: pointer
+}
+.asiForm .showFieldLinks a{
+	font-size: 11px !important;
+	padding: 0 8px 0 6px!important:
+}
+.asiForm .noLegend .legend{
+	width:0 !important;	
+}
+.asiForm .noLegend .fields{
+	width:100% !important;
+}
+.asiForm .showFieldLinks{
+	color: #4271c6;
+	padding-left:8px;
+}
+.dateTimeRemoveLink{
+   margin-left:15px;
+}
+.asiInputTextareaQuirksModeHeightFix label { 
+  height:98px;
+}
+/*********************************
+GRID COMPONENT (DEFAULT VIEW)
+*********************************/
+.asiGridOuterContainer{
+  clear:left;
+}
+.asiGridBackdropContainer{
+  width: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+}
+.print .asiGridBackdropContainer{
+  overflow:visible;  
+}
+.asiGrid{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.asiGrid.server{
+  width: auto;
+  padding: 0;
+  margin: -21px 0 -1px;
+}
+*>.asiGrid.server{
+  margin: -21px 0 0;
+}
+.asiGrid .asiToolbar{
+  margin: 0 -4px 0 -4px;
+}
+.asiGrid.server .asiToolbar{
+  display: inline-block;
+  margin: 0 -5px 0 -5px;
+  height: auto;
+}
+.asiGrid .masterBox, .asiGrid .selectingBox{
+  margin-right: 7px;
+  }
+.asiGrid .favoritesIcon{
+  margin-right: 7px;
+}
+/* = start grid meta =*/
+.asiGrid caption{
+  text-align: left;
+  font-size:14px;
+  padding: 5px 10px;
+  width: 100%;
+  display: block;
+}
+.print .asiGrid caption{
+  display: none;
+}
+.asiGrid caption p{
+  margin-top: 0;
+  margin-left: -2px;
+  font-size: 11px;
+  padding-left: 18px;
+}
+.asiGridControls{
+  text-align: right;
+}
+.asiGridSortArrow{
+  padding-left: 2px;
+}
+.asiGridParent{
+  text-align: center;
+}
+.asiGridHeaders a img{
+  margin-left: 10px;
+}
+
+.asiGrid th {
+  text-align: left;
+  padding: 0 4px;
+  height: 24px;
+  vertical-align: middle;
+}
+.asiGrid th.sortable{
+  padding-right: 19px !important;
+}
+.asiGridHeaderBackdrop{
+  height: 20px;
+}
+.asiGrid th img{
+  margin: 0;
+}
+.asiGrid th a{
+  display: block;
+  width: 100%;
+}
+/* = end grid meta = */
+.asiGrid td{
+  padding: 0 4px;
+  vertical-align: middle;
+}
+.asiGrid.server th{
+  padding: 0 10px 0 8px;
+}
+* html .asiGrid.server th{
+  padding: 0 8px;
+}
+.asiGrid.server td{
+  padding: 0 8px;
+}
+.asiGridNoResults{
+  text-align: center;
+  width: 100%;
+}
+.asiGridNoResults td{
+  padding: 10px 2px;
+  text-align: center;
+}
+.asiGrid tbody tr.asiGridNoResults{
+  height: 80px;
+}
+.asiGrid tbody tr.asiGridNoResults td{
+  font-style: italic;
+}
+.asiGridNoResults p{
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+}
+.asiRemoveGridItem{
+  text-align: center;
+  width: 15px;
+}
+.asiRemoveGridItem span{
+  display: none;
+}
+.asiGrid tbody tr{
+  height: 24px;
+  vertical-align: middle;
+}
+.asiGrid tbody tr img{
+  margin: 2px 4px 2px 0;
+}
+.asiGrid tbody tr .asiGridContextMenu{
+  display: none !important;
+}
+.asiGrid tbody tr.selected .asiGridContextMenu{
+  display: inline !important;
+}
+.asiGrid tbody tr img.imgOnly{
+  margin-right: 0;
+}
+.asiGridTD0 input, .asiGridTH0 input{
+  vertical-align: middle;
+}
+/* = Grid 2.0 always hides first column (descriptor) = */
+.asiGridContainer .asiGridTD0, .asiGridContainer .asiGridTH0{
+  display: none;
+}
+.asiGridContainer .asiGridNoResults .asiGridTD0{
+  display: block;
+}
+#asiDialog .asiGridContainer{
+  height: 360px;
+  overflow: auto;
+  margin: -5px 4px -5px;
+}
+.asiGridContainer.noClipping{
+  overflow:visible !important;
+}
+#asiDialog .asiGridContainer table{
+  position: static;
+}
+.asiGridPageCtrls{
+  float: left;
+  margin-left: -2px;
+}
+.asiGridPageCtrls a {
+  margin: 0 1px;
+}
+.asiGridPaging{
+  white-space:nowrap;
+}
+.asiGridPagenum{
+  vertical-align: middle;
+  float: right;
+  margin-right: 12px;
+}
+.asiGridPageCtrls .strong{
+  font-weight:bold;
+} 
+
+/* = grid pseudo classes = */
+.asiGrid tr.alternate {
+}
+.asiGridPagenum{
+  vertical-align: middle;
+}
+/* Multiple Components */
+.asiDialog .asiGridOuterContainer{
+  margin: 4px;
+  width: 98%;
+}
+.asiPicker .asiGrid{
+  margin: 0;
+}
+.asiPicker .asiGrid tbody tr{
+  height: 24px;
+}
+.asiPicker .asiPickedListContainer .asiGrid thead{
+  display: none;
+}
+.asiPicker .asiGridPagenum, .asiPicker caption, .asiPicker .asiGrid th, .asiPicker .asiGridHeaders, .asiPicker .asiGridTD2, .asiPicker .asiGridTD0{
+  display: none;
+}
+.asiPicker .asiGridNoResults p{
+  margin-top:70px;
+}
+.asiPicker .asiRemoveGridItem a{
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+.reportContainer .asiGrid .asiGridTD0.rowWithCheckbox{
+  text-indent: -30px;
+  padding-left: 38px;
+}
+.asiGridInnerContainer table.asiGrid{
+  width:100%;
+}
+div.mdatetime{
+  width: 185px;
+  height:auto;
+  z-index: 10000;
+  text-align: center;
+  position: relative;
+}
+*>.mdatetime{
+  width: auto;
+}
+.mdatetime .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+iframe.mdatetime{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 187px;
+	height:187px;
+  z-index: -1;
+	margin:-1px;
+}
+.mdatetime .subheader{
+  margin-top: 20px;
+}
+.mdatetime .close{
+  display: block;
+  text-align: right;
+}
+.mdatetime select{
+  font-size: 11px;
+}
+.mdatetime .graphicCalendar{
+  width: 133px;
+  margin: 5px auto;
+}
+.mdatetime .day, .mdatetime .date{
+  width: 19px;
+  line-height: 19px;
+  float: left;
+  text-align: center;
+}
+.mdatetime .subheader img{
+	margin:-4px 3px 0 2px; 
+}
+
+*+html .formContent .datetime a {
+  vertical-align:25%;
+}
+/*********************************
+POP-UPS, DIALOG BOXES AND HEADERS
+*********************************/
+.asiPalette{
+  position: absolute;
+  height: auto;
+  width:132px;
+  top: 200px;
+  left: 300px;
+  z-index: 1000;
+}
+*>.asiPalette{
+  height: auto;
+}
+.asiPalette .controls{
+  position: absolute;
+  top: 0;
+  right: 2px;
+  margin: 0 0;
+}
+.asiPalette .controls a{
+  float: right;
+  margin: 0;
+  padding: 0 0 0 1px;
+}
+.asiPalette .controls a img{
+  height: 11px;
+  width: 11px;
+}
+.asiPalette h1{
+  font-size: 11px;
+  line-height: 13px;
+  padding: 0 2px;
+  margin: 0 0 1px;
+  cursor: move;
+}
+.asiPalette .content{
+  margin: 2px;
+}
+.asiPalette .fontselect{
+  font-size: 11px;
+  border: 1px solid #a0b6d0; 
+  font:arial;
+  width: 126px;
+  margin: 0 0 2px 0;
+}
+.asiPalette .sizeselect{
+  float: left;
+  font-size: 10px; 
+  border: 1px solid #a0b6d0; 
+  font:arial; 
+  width:70px; 
+  margin: 0 2px 2px 0;
+}
+.asiPalette .colorselect{
+  float:right;
+  height: 18px;
+  width: 51px;
+  margin: 0 0 2px 0;
+  cursor: pointer;
+}
+.asiPalette .styleselect a{
+  float: left;
+}
+
+.asiPalette img{
+  height: 14px;
+  width: 14px;
+}
+.asiTempContainer{
+  position: absolute;
+  z-index: 1000;
+  }
+/*********************************
+PICKER
+*********************************/
+#asiPicker{
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+}
+.asiPicker{
+  width: 660px;
+  height: 390px;
+  font-size: 11px !important;
+}
+iframe.asiPicker{
+  visibility: hidden;
+}
+.asiPickerArea{
+  height: 311px;
+  margin: 5px 25px 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+.asiPickerSelectorBox{
+  width: 417px;
+  height:284px;
+  position: absolute;
+  top: 17px;
+  left: 0;
+  z-index: 1;
+}
+.asiPickerSelectedBox{
+  position: absolute;
+  top: 17px;
+  left: 413px;
+  width: 210px;
+  height: 284px;
+}
+.asiPicker .asiPickerSelectedCount{
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 12px;
+}
+.asiTreeContainer, .asiPickerGridResults, .asiPickedListContainer{
+  overflow: auto;
+  height: 275px;
+  width: 200px;
+  margin: 3px;
+}
+.processesPicker .asiTreeContainer{
+  width: 410px;
+}
+.asiTreeContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.asiTreeContainer label{
+  display: block;
+  margin: 10px 5px;
+}
+.asiTreeContainer p{
+  margin: 5px;
+}
+.asiTreeContainer .search p{
+  text-align: right;
+  margin: 0 5px;
+  padding: 0;
+}
+.asiPickerGridResults{
+  position: absolute;
+  top: 0;
+  left: 205px;
+}
+.asiPickerButtons{
+  padding: 0 5px;
+  text-align: right;
+  position: absolute;
+  bottom: 5px;
+  right: 25px;
+  z-index: 0;
+}
+/* Instructions */
+.asiPicker .asiInstructions{
+  margin-top: 15%;
+}
+.asiInstructions{
+  margin: 40% auto;
+  padding: 0 5%;
+  text-align: center;
+  font-size: 11px;
+}
+/* == double column picker pane == */
+.asiPickerGridContainer{
+  width:405px;
+  height:275px;
+  margin:3px;
+  overflow: auto;
+}
+/* == PICKER color scheme == */
+.asiPicker .active{
+  z-index: 1;
+}
+/* == PICKER MODS ==*/
+.asiPicker .singular{
+  display: none;
+}
+.asiSinglePicker .plural{
+  display: none;
+}
+.asiSinglePicker .singular{
+  display: inline !important;
+}
+.asiSinglePicker, .asiSinglePicker .asiPicker{
+  width: 460px;
+  min-height:0 !important;
+}
+.asiSinglePicker .asiPickerArea{
+  width:419px;
+}
+.asiSinglePicker .asiGridOuterContainer{
+  width: 192px;
+}
+.asiSinglePicker .asiPickerSelectedBox, .asiSinglePicker .asiPickerSelectedCount{
+  display: none;
+}
+/***************** PICKER V3 (autocomplete) *******************/
+.asiPicker.v3{
+  width:523px;
+  height:auto;
+}
+.asiPicker.v3 .spacer{
+  float:left;
+  clear:left;
+  height:50px;
+}
+.asiSearchInput{
+  padding-left:20px;
+}
+.asiPicker.v3 .component{
+  padding-left:16px;
+  float:left;
+}
+.asiPicker.v3 .asiPickerSelected{
+  float:left;
+  font-size:11px;
+  margin-top:10px;
+  padding-left:16px;
+  width:490px;
+}
+.quirksMode .asiPicker.v3 .asiPickerSelected{
+  width:495px;
+}
+.asiPicker.v3 .asiPickerSelected .message{
+  float:left;
+  margin-top:3px;
+  margin-bottom:3px;
+  font-weight:bold;
+  width:75px;
+}
+.asiPicker.v3.asiSinglePicker .asiPickerSelected .message{
+  /*text-align:right;*/
+}
+.asiPicker.v3 .asiPickerSelected textarea{
+  float:right;
+  width: 487px;
+  height: 80px;
+}
+.asiPicker.v3.asiSinglePicker .asiPickerSelected textarea{
+  height: 15px;
+  width:407px;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.quirksMode .asiPicker.v3.asiSinglePicker .asiPickerSelected textarea{
+  width:403px;
+  height:20px;
+}
+.pickerAdjustments .asiPicker.v3.asiSinglePicker .asiPickerSelected{
+  width:503px;
+}
+.pickerAdjustments .asiPicker.v3.asiSinglePicker .asiPickerSelected textarea{
+  height:18px;
+  padding:0;
+}
+.asiPicker.v3 .asiPickerButtons{
+  text-align: right;
+  position: absolute;
+  bottom: 15px;
+  right: 12px;
+  z-index: 0;
+}
+.asiPicker.v3 .messageBar{
+  margin-top:-10px;
+}
+.quirksMode .asiPicker.v3 .messageBar{
+  margin-top:-20px;
+}
+.quirksMode .asiForm input.Picker{
+  width: 400px;
+  height: 20px;
+}
+.quirksMode .asiForm .legend{
+  width: 18%;
+}
+.quirksMode .Picker{
+  width: 278px !important;
+}
+
+.assigneesPicker .asiForm fieldset{
+  width:650px;
+}
+.assigneesPicker .asiForm .legend{
+  margin-top:4px;
+  padding-left:5px;
+  padding-right:10px;
+  width: auto;
+  text-align: left;
+  font-size:12px;
+}
+.assigneesPicker .asiForm label{
+  width:500px !important;
+}
+.assigneesPicker .asiForm .fields{
+  padding-left: 0!important;
+}
+#privilegesGridContainer{
+  margin-left:42px;
+  overflow:auto;
+  height:280px;
+}
+#privilegesGridContainer img{
+  margin-left:35px;
+  margin-top:-7px;
+}
+.privilegesInstructions{
+  margin-left:42px;
+}
+.privilegesInstructions .header{
+  font-weight:bold;
+  margin:20px 0 10px -2px;
+  font-size:11px;
+}
+.privilegesInstructions li{
+  margin:7px 15px;
+  font-size:11px;
+}
+#privilegesGridContainer .asiGrid{
+  margin-top:10px;
+  border:1px solid #7b7b7b;
+}
+#privilegesGridContainer .asiGrid .asiGridTH0{
+  width:170px;
+}
+#privilegesGridContainer .asiGrid .asiGridTH1{
+  width:330px;
+}
+#privilegesGridContainer .asiGrid tbody tr img{
+  margin-left:0;
+  margin-right:2px;
+}
+#privilegesGridContainer .asiGrid tbody tr input{
+  margin-right:35px;
+}
+/***************** Light picker *******************/
+.lightpicker{
+  width:195px;
+}
+#lightPicker{
+  margin: 15px;
+}
+#lightPickerSearch{
+  margin:3px;
+  width:156px;
+}
+#lightPickerSuggestionsGrid{
+  height:170px;
+  width:156px;
+  margin:3px 3px 20px 3px;
+}
+p.securityManagerHeader{
+  text-align: left;
+  margin: 5px 10px 15px;
+  color: #333;
+}
+p.securityManagerHeader .securityManagerHeader select{
+  font-size: 11px;
+}
+.securityManagerHeader select, .securityManagerHeader input{
+  vertical-align: middle;
+}
+.securityManagerHeader input{
+  margin: 5px 0;
+}
+.securityManager .asiGridContainer{
+  height: auto !important;
+}
+.singleRoleSecurityGrid .asiGridTH2, .singleRoleSecurityGrid .asiGridTD2{
+  display: none;
+}
+.securityManager .asiGrid tbody td img.partlyTranspUserImg{
+  margin:0 5px 0 -2px;
+}
+div#inlineConfirmMessage{
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  width: 400px;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow:ellipsis;
+  margin-left: -200px;
+  padding: 3px 25px 3px 25px;
+  z-index: 100;
+  text-align: center;
+  font-size: 11px;
+  display: none;
+}
+
+div.minimizedConfirmMessage{
+  height: 16px;
+}
+
+div#inlineConfirmMessage:hover{
+  height: auto;
+}
+/*********************************
+ FLAT TABS
+*********************************/
+.asiFlatTabs{
+  padding: 0 0 1px 0;
+}
+*+html .asiFlatTabs, .quirksMode .asiFlatTabs, .formDesigner .asiFlatTabs{
+  width: 100%;
+}
+.asiFlatTabs li{
+  margin: 0;
+  margin-bottom: -1px;
+  padding-bottom:2px;
+  display:inline-block;
+}
+*+html .asiFlatTabs li, .quirksMode .asiFlatTabs li, .formDesigner .asiFlatTabs li {
+  float:left;
+}
+.asiFlatTabs li.current{
+  margin-bottom: -2px;
+  border-bottom: 1px solid white;
+}
+.asiFlatTabs a{
+  display: block;
+  text-align: center;
+  margin-bottom: -2px;
+  padding: 0 9px;
+}
+/***********************************
+Canvas Tabs (to be refactored by UI)
+***********************************/
+ul.canvasTabs{
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+.canvasTabs li{
+  float: left;
+  width: 200px;
+  margin: 0;
+}
+/*.canvasTabs li div.tabDiv{
+  padding: 3px;
+}*/
+.canvasTabs li div{
+  float: left;
+  overflow: hidden;
+}
+.canvasTabs li img{
+  display: block;
+}
+.canvasTabs li img.closeTab {
+  float: right;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+.canvasTabs li img.indicator {
+  float: left;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+div.arrows {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+img.pageArrow {
+  display: block;
+}
+
+.asiTooltip {
+  position: absolute !important;
+  margin-top: 20px !important;
+  padding: 2px !important;
+  z-index: 49 !important;
+}
+.asiTooltipIframe {
+  filter: alpha(Opacity: 0);
+}
+/*********************************
+C2 Wizard
+*********************************/
+.asiWizard2{
+  width: 650px;
+  height: auto;
+  padding: 3px;
+  margin: 10px auto;
+}
+/*Header*/
+.asiWizard2 .asiWizHeader{
+  min-height: 50px;
+  height:auto;
+  margin-bottom: 8px;
+}
+.asiWizard2 .asiWizHeader p{
+  margin: 5px 70px;
+}
+.asiWizard2 .asiWizHeader h4{
+  margin: 0 70px;
+  padding-top: 10px;
+  font-size: 13px;
+}
+/*Wizard Markers*/
+.asiWizard2 .asiWizMarkers{
+  float: left;
+  width: 170px;
+  height: 290px;
+}
+.asiWizMarkers li{
+  margin: 0 5px;
+  padding: 6px 0;
+}
+.asiWizard2.noMarkers .asiWizMarkers{
+  display: none;
+}
+/*WizForm*/
+.asiWizard2 form{
+  margin: 0 0 0 180px;
+  height:auto;
+}
+.asiWizard2.noMarkers form{
+  margin: 0;
+}
+.asiWizard2 span.confirm{
+  display: block !important;
+}
+.asiWizard2 span.confirm .instructions, .asiWizard2 span.confirm .fieldInstructions, .asiWizard2 span.confirm .questionBox{
+  display: none;
+}
+.asiWizard2 span.confirm .divider{
+  display: none !important;
+}
+.asiWizard2 span.confirm .iButtons{
+  display: none !important;
+}
+.asiWizard2 span.confirm .inputMode{
+  display: none !important;
+}
+.asiWizard2 span.confirm .outputMode{
+  display: inline !important;
+}
+.asiWizard2 span.confirm .confirmValue{
+  display:block;
+  overflow:hidden; 
+  word-wrap: break-word;  
+}
+/* Wizard footer */
+.asiWizard2 > br{
+  clear:both;
+  margin:5px;
+}
+/* == PICKER WIZARDS == */
+.asiPicker .asiWizard2{
+  width: 616px;
+  height: 285px;
+  overflow: auto;
+  margin: 0;
+}
+.asiSinglePicker .asiWizard2{
+  width: 412px;
+  height: 292px;
+}
+
+/*********************************
+OLD WIZARD
+*********************************/
+.asiWizard{
+  width: 650px;
+  height: 350px;
+  position: relative;
+  margin: 10px auto;
+  padding: 3px;
+}
+*>.asiWizard{
+  height: auto;
+  min-height: 355px;
+}
+.asiWizSteps{
+  margin: 60px 0 0 180px;
+  padding: 0;
+  position: relative;
+}
+.asiWizSteps .asiForm{
+  margin: 3px 0;
+}
+.asiWizSteps li{
+  margin-top: -5px;
+}
+.asiWizard.noMarkers .asiWizSteps li{
+  margin: 0;
+}
+.asiWizSteps li.wizardStepHeader{
+  position: absolute;
+  top: -64px;
+  left: -184px;
+  width: 594px;
+  margin-top: 5px;
+  padding-left: 60px;
+  height: 45px;
+}
+.lowBandwidth .asiWizSteps li.wizardStepHeader{
+  padding-left: 10px;
+}
+.asiWizSteps ul>li.wizardStepHeader{
+  height: 40px;
+}
+.wizardStepHeader h2{
+  font-size: 13px;
+  margin: 5px 0;
+}
+.asiWizard.noMarkers {
+  width: 470px;
+}
+.asiWizard.noMarkers .asiWizSteps{
+  margin: 0;
+}
+div.calendar{
+  border: 1px solid #333;
+  background: #ededee;
+}
+iframe.calendar{
+  filter: alpha(Opacity: 0);
+  opacity:0;
+}
+.calendar .dateContainer{
+  background-color: white;
+}
+.calendar .day, .calendar .hover{
+  background-color: #ededee;
+}
+.calendar .today{
+  font-weight: bold;
+}
+.calendar .highlight{
+	background-color: #b4d0d6;
+}
+.calendar .todayIsMsg a, .calendar .day{
+	color: #4271c6;
+	font-weight: bold;
+}
+.calendar .todayIsMsg a:hover{
+  color: #f93;
+}
+.calendar .subheader{
+  background-color: white;
+}
+.calendar .date, .calendar .day, .calendar .subheader img{
+	cursor: pointer;
+}
+/*********************************
+DROP-DOWN MENUS
+*********************************/
+.asiColorpicker {
+  cursor: default;
+  background: white;
+  border: 1px solid #333;
+}
+.asiColorpicker a {
+  cursor: default;
+  border: 1px solid white;
+}
+.asiColorpicker a:hover{
+  border-color: #333;
+}
+.asiColorpicker a:active{
+  border-color: white;
+}
+div.datepicker{
+  border: 1px solid #333;
+  background: white;
+}
+iframe.datepicker{
+  filter: alpha(Opacity: 0);
+}
+.datepicker a{
+  color: #333;
+}
+.datepicker .close{
+  cursor: pointer;
+}
+.datepicker .dateContainer{
+  background-color: white;
+}
+.datepicker .day, .datepicker .date:hover{
+  background-color: #69c;
+  color: white;
+}
+.datepicker .today{
+  font-weight: bold;
+}
+.datepicker .quickLink{
+  color: blue;
+  float: right;
+  clear:both;
+  margin:3px;
+}
+a.quickLink{ 
+  color: #4271c6; 
+  font-size: 11px; 
+}
+a.quickLink:hover{
+  color: #f93; 
+} 
+.fieldContainer span.singleLine{
+  white-space:nowrap;
+}
+.asiWaitFilter{
+  background-color: white;
+  border: 1px solid #9cb5c0;
+}
+.asiForm {
+  color: #333;
+}
+.asiForm fieldset{
+  border: 0;
+}
+.asiForm legend{
+  font-weight: bold;
+  color: #333;
+}
+.asiForm div.legend{
+  font-weight: bold;
+  color: #333;
+}
+.asiForm li.headerInfo{
+  border: 1px solid white;
+}
+.asiForm li.headerInfo legend{
+  font-weight: bold;
+  color: #666;
+}
+.asiForm li.lastHeaderItem{
+  border-bottom: 1px solid #a0b6d0;
+}
+.asiForm label span span, .asiForm .errorMessage, .errorMessage{
+  font-weight: bold;
+  color: #990000;
+}
+.messageText{
+  background-color: #eee;
+  border: 1px dashed #ddd;
+}
+.asiForm p.instructions{
+  color: #666;
+}
+.asiForm p.fieldInstructions, .formInstructions{
+  color: #666;
+}
+.asiForm textarea, .asiForm select, input.Picker, input.asiFormDate{
+  border: 1px solid #a0b6d0;
+}
+.centerForm{
+  background: white;
+}
+.asiForm .outputMode label .label, .asiForm .inputMode .radiolabel{
+  font-weight: normal;
+}
+.asiForm .requiredMessage{
+  color: red;
+}
+
+/*********************************
+ Compact Form Style
+*********************************/
+.compactForm .asiForm li{
+  border: 0;
+}
+/*Multiple Components*/
+.asiDialog .asiForm{
+  background: white;
+  color: black;
+}
+.asiDialog .asiWizard .asiForm{
+  border: 0;
+}
+/*********************************
+GRID COMPONENT (DEFAULT VIEW)
+*********************************/
+.asiGridInnerContainer{
+  border-bottom: 1px solid #ebebeb;
+}
+.asiGrid{
+  color: #333;
+  cursor: default;
+  border: 0;  
+  border-collapse: collapse;
+}
+.asiGrid input{
+  /*border: 0 !important;*/
+}
+/* = start grid meta =*/
+.asiGrid caption{
+  font-weight: bold;
+  background-color: white;
+}
+.asiGrid caption p{
+  font-style: normal;
+  font-weight: normal;
+  background: url(../components/toolbar/img/info.gif) center left no-repeat;
+}
+.asiGridParent{
+  font-weight: bold;
+  background-color: #bdd3e7;
+}
+.asiGrid th{
+  border-left: 1px solid #bbbbbb;
+}
+.asiGridTH0{
+  border-left: 0;
+}
+.asiGrid th, .asiGridHeaderBackdrop{
+  color: #333;
+  background-color: #dddddd;
+  border-bottom: 1px solid #bbbbbb;
+} 
+.print .asiGridHeaderBackdrop, .print .asiGrid th{
+  background-color: transparent;
+}
+.asiGrid th.ascending{
+  background: #dddddd url(../../components/img/sort_asc.gif) 98% 52% no-repeat;
+}
+.asiGrid th.descending{
+  background: #dddddd url(../../components/img/sort_desc.gif) 98% 52% no-repeat;
+}
+.asiGrid th.hover {
+  background-color: #d1e3e2;
+}
+.asiGrid tr:hover{
+  background-color: #dce8ed;
+}
+.asiGrid tr.asiGridNoResults:hover{
+  background-color: transparent;
+}
+/* = end grid meta = */
+.asiGrid tbody td{
+	border-color: #bbbbbb;
+	border-style: dotted;
+	border-width: 0 0 1px;
+}
+.asiGrid tbody>td{
+  border-width: 1px;
+}
+.asiGridNoResults td{
+  background: transparent;
+  border: 0 !important;
+}
+.asiGridNoResults p{
+  font-weight: normal;
+}
+.asiGrid input.text{
+  border: 1px solid #7396DE !important;
+}
+.asiGridContainer tbody tr{
+  cursor: pointer;
+  border: 0 !important;
+  background:  white;
+}
+/* = grid pseudo classes = */
+.asiGrid tr.alternate {
+  /*background-color: #fbfbfb;*/
+}
+.asiGrid tr.selected td{
+  background-color: #dce8ed;
+}
+/* Multiple Components */
+
+.asiPicker .asiGrid{
+  width: 100%;
+}
+.asiPicker .asiGridHeaderBackdrop{
+  display: none;
+}
+.asiPicker .asiGrid tbody tr{
+  cursor: default;
+}
+.asiPicker .asiGrid tbody td{
+  border-right-width: 0;
+}
+.asiPicker .asiRemoveGridItem a{
+  background: transparent url(../../components/img/delete_gray.gif) center no-repeat;
+}
+.quirksMode .asiPicker .asiRemoveGridItem a{
+  background: transparent url(../../../components/img/delete_gray.gif) center no-repeat;
+}
+.asiPicker tr.hover .asiRemoveGridItem a{
+  background: transparent url(../../components/img/delete.gif) center no-repeat;
+}
+#variablesGrid .asiGrid tbody tr{
+  cursor:default;
+}
+/* report filtering */
+.columnFilters form{
+  margin: 5px 0 5px 0;
+}
+.columnFilters input{
+  border: 1px solid #a0b6d0 !important;
+}
+.columnFilters .date input, .columnFilters .time input, .columnFilters .datetime input{
+  width: 50px;
+}
+.columnFilters td{
+  white-space:nowrap;
+  color: #333;
+  border-bottom: 1px solid #9caec1;
+}
+div.mdatetime{
+  border: 1px solid #333;
+  background: white;
+}
+iframe.mdatetime{
+  filter: alpha(Opacity: 0);
+}
+.mdatetime a{
+  color: #333;
+}
+.mdatetime .close{
+  cursor: pointer;
+}
+.mdatetime .graphicCalendar{
+  background-color: white;
+}
+.mdatetime .day, .mdatetime .date:hover{
+  background-color: #69c;
+  color: white;
+}
+.mdatetime .today{
+  font-weight: bold;
+}
+.mdatetime .quickLink{
+  color: blue;
+  float: right;
+  clear:both;
+  margin:3px;
+}
+a.quickLink{ 
+  color: #4271c6; 
+  font-size: 11px; 
+}
+a.quickLink:hover{
+  color: #f93; 
+} 
+/*********************************
+POP-UPS, DIALOG BOXES AND HEADERS
+*********************************/
+#asiPalette{
+  border: 1px solid #82919c;
+}
+.asiPalette{
+  color: black;
+  background: white;
+  border: 1px solid #82919c;
+}
+.asiPalette .controls{
+  font-variant: normal;
+}
+.asiPalette .controls a, .asiPalette .controls a img{
+  border: 0;
+}
+.asiPalette .controls .move{
+  cursor: move;
+}
+.asiPalette h1{
+  background: #82919c;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+}
+.asiPalette p{
+  font-weight: bold;
+}
+.asiPalette .colorselect{
+  border: 1px solid black;
+  background: black;
+}
+.asiTempContainer{
+  position: absolute;
+  border: 1px solid #82919c;
+  background-color: white;
+  filter: alpha(Opacity: 40);
+  opacity:0.4;
+  z-index: 1000;
+ }
+/*********************************
+PICKER
+*********************************/
+.asiPicker a{
+  text-decoration: none;
+}
+.asiPicker img{
+  border: 0;
+}
+.asiPickerSelectorBox{
+  font-weight: normal;
+  border: 1px solid #94a9b8;
+  background: white;
+}
+.asiPickerSelectedBox{
+  font-weight: normal;
+  border: 1px solid #94a9b8;
+  background: white;
+}
+.asiPicker .asiPickerSelectedCount{
+  font-weight: bold;
+}
+.asiTreeContainer, .asiPickerGridResults, .asiPickedListContainer{
+  border: 1px solid #94a9b8;
+}
+.asiPickerGridResults{
+  color: #ddd;
+}
+/* Instructions */
+.asiInstructions, .asiPicker .asiInstructions{
+  color: #333;
+}
+.asiInstructions a{
+  font-weight: bold;
+}
+/* == double column picker pane == */
+.asiPickerGridContainer{
+  border: 1px solid #94a9b8;
+}
+/* == PICKER color scheme == */
+.asiPicker a, .asiPicker .asiHierarchy a:hover, .asiPicker .asiTreeContainer{
+  color: #369;
+}
+.asiPicker .active{
+  border-color: #369;
+}
+.asiPickerButtons input{
+  border: 1px solid #369;
+}
+/***************** Light picker *******************/
+#lightPickerSearch{
+  border: 1px solid #a0b6d0;
+}
+#lightPickerSuggestionsGrid{
+  border:1px solid #787878;
+  background:white;
+}
+div#inlineConfirmMessage{
+  color: #535353;
+  background-color: #dbecfe;
+  border: 1px solid #919191;
+  cursor: pointer;
+  background-image: url('../../components/toolbar/img/blueinfo.gif');
+  background-repeat: no-repeat;
+  background-position: 6px 5px;
+}
+/*********************************
+ FLAT TABS
+*********************************/
+ul.asiFlatTabs{
+  background:transparent url(../../components/img/border_hz_999.gif) bottom repeat-x;
+}
+.asiFlatTabs li{
+  background: white;
+  border: 1px solid #7a7a7a;
+  font-weight:bold;
+} 
+.asiFlatTabs a{
+  color: #7a7a7a;
+  border-width: 3px 0 5px 0;
+  border-style: solid;
+  border-top-color: white;
+  border-bottom-color: #DFDFDF;
+  white-space: nowrap;
+}
+.asiFlatTabs li.current{
+  background: white;
+  font-weight: bold;
+}
+.asiFlatTabs li.current a{
+  font-weight: bold;
+  color: black;
+  border-top: 3px solid #ffc03a;
+  border-bottom-color: white;
+  white-space: nowrap;
+}
+
+/***********************************
+Canvas Tabs
+***********************************/
+ul.canvasTabs{
+  background:transparent url(../../components/img/border_hz_999.gif) bottom repeat-x;
+}
+.canvasTabs li{
+  background: white;
+  border: 1px solid #7a7a7a;
+  border-bottom: 0;
+  font-weight:bold;
+ 
+}
+.canvasTabs li div.tabDiv{
+  color: #7a7a7a;
+  border-width: 3px 0 5px 0;
+  border-style: solid;
+  border-top-color: white;
+  border-bottom-color: #DFDFDF;
+}
+.canvasTabs li.current{
+  font-weight: bold;
+  border: 1px solid #000000;
+  border-bottom-color: white;
+  border-left: 1px solid #000000;
+}
+.canvasTabs li.inactive{
+  color: gray;
+}
+.canvasTabs li.current div.tabDiv{
+  font-weight: bold;
+  color: black;
+  background: transparent url(../../components/img/tab_bg.gif);
+  border-top: 3px solid white;
+  border-bottom-color: white;
+}
+.canvasTabs li img.closeTab {
+  cursor: pointer;
+}
+.canvasTabs li div.tabName {
+  cursor: default;
+  overflow: hidden;
+}
+.asiTooltip {
+  border: 1px solid #333 !important;
+  background-color: #ffffe7 !important;
+  color: #333 !important;
+}
+/*********************************
+C2 Wizard
+*********************************/
+.asiWizard2{
+  background: #E8E8E8;
+  border: 1px solid #9cb5c0;
+}
+/*Header*/
+.asiWizard2 .asiWizHeader{
+  background: #e8e8e8 url(../../components/wizard/img/wizard.gif) 10px 50% no-repeat;
+  border-bottom: 1px solid #B5B5B5;
+}
+.lowBandwidth .asiWizard2 .asiWizHeader{
+  background: #E8E8E8;
+}
+/*WizForm*/
+.asiWizard2 form{
+  background: white;
+  border: 1px solid #B5B5B5;
+}
+/*Wizard Step Bars*/
+.asiWizMarkers{
+  background: url(../../components/wizard/img/roundedBG.gif);
+}
+.lowBandwidth .asiWizMarkers{
+  border: 1px solid #B5B5B5;
+  background: #E8E8E8;
+}
+.asiWizMarkers li{
+  list-style: inside decimal !important;
+  color: #4271c6;
+  font-weight: bold;
+}
+.asiWizMarkers.clickable li.next{
+  cursor: pointer;
+}
+.asiWizMarkers.clickable li.done{
+  color: #195497;
+  cursor: pointer;
+}
+.asiWizMarkers li.current{
+  color: #f3a50d;
+}
+/*********************************
+OLD WIZARD
+*********************************/
+.asiWizard{
+  background: #E8E8E8;
+  border: 1px solid #B5B5B5;
+}
+.asiWizSteps{
+  background: white;
+  border: 1px solid #B5B5B5;
+}
+.asiWizSteps li.wizardStepHeader{
+  background: #E8E8E8 url(../../wizard/img/wizard.gif) 10px 50% no-repeat;
+  border-bottom: 1px solid #B5B5B5;
+}
+.lowBandwidth .asiWizSteps li.wizardStepHeader{
+  background: #E8E8E8;
+}
+ul, ol{
+  margin: 0;
+  padding: 0;
+}
+img, .alignWithImage{
+  vertical-align: middle;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+frameset, frame{
+  margin: 0;
+  padding: 0;
+}
+iframe#fProcess{
+  display: none;
+}
+td{
+  font-size: 12px;
+  vertical-align: top;
+}
+th{
+  font-size: 12px;
+}
+hr{
+  margin: 1px;
+  height: 1px;
+  width: 100%;
+}
+p{
+  vertical-align: top;
+}
+a {
+  outline: none; 
+}
+form {
+  margin:0;
+}
+input, textarea, select { 
+  font-size:inherit;
+}
+.clearboth{
+  clear:both;
+}
+.cloneable {
+  display: none;
+}
+.center{
+  text-align:center;
+}
+.inline{
+  display:inline;
+}
+#skipNavigationLink508 {
+  width:1px; 
+  height:1px;
+  overflow:hidden;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+a, .asiGrid a{
+  color: #285fab;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover{
+  color: #f93;
+}
+ul, ol, li{
+  list-style: none;
+}
+img{
+  border: 0;
+}
+body{
+  background-color: white;
+  border: 0;
+  color: #333;
+  font-size:12px;
+}
+frameset, frame{
+  background-color: white;
+  color: black;
+}
+iframe#fProcess{
+  border: 0;
+}
+hr{
+  background-color: #999;
+  border: 0;
+}
+input, select, textarea{
+  font-size:11px;
+  font-family:inherit; 
+  font-weight:inherit;
+}
+/*************** FONT FAMILY *************************/
+body{font-family: Arial,Verdana, Tahoma, Helvetica;}
+td{font-family: Arial,Verdana, Tahoma, Helvetica;}
+th{font-family: Arial,Verdana, Tahoma, Helvetica;}
+
+/* ------------- FORMS ----------------------------- */
+.asiForm {font-family: Arial,Verdana, Tahoma, Helvetica;}
+.asiForm textarea, .asiForm select, input.Picker, input.asiFormDate{font-family: Arial;}
+textarea.iText, input.iText, input.iFile {font-family: Arial;}
+.miniWebChannel{font-family: Arial,Verdana,Tahoma,Helvetica,Times;}
+.dialogSection{font-family: Arial,Verdana, Tahoma, Helvetica;}
+/* ------------- DESIGNER -------------------------- */
+.quirksMode select {font-family:Arial;}
+.quirksMode input {font-family:Arial;}
+.quirksMode textarea {font-family:Arial;}
+.quirksMode li a {font-family: Arial;}
+.quirksMode p {font-family: Arial;}
+.quirksMode li {font-family: Arial;}
+.quirksMode a {font-family: Arial;}
+
+.desDlgMain div.content input {font-family: Arial,Verdana,Helvetica;}
+.desDlgMain div.content textarea {font-family: Arial,Verdana,Helvetica;}
+.desDlgMain div.header {font-family:Arial;}
+p.alertOK {font-family:Arial;}
+p.alertError {font-family:Arial;}
+div.alertError li {font-family:Arial;}
+.toolBar {font-family: Arial,Tahoma,Verdana,Helvetica;}
+.toolbarMenu {font-family:Arial;}
+.jsxspyglass {font-family:Arial;}
+.noteContent{font-family: Arial;}
+
+/* ------------- EXPRESSION EDITOR ----------------- */
+.expressionEditorTitleBar{font-family:arial;}
+
+/* Browse content categories (portal) */
+table.customizeChannel input{font-family: Arial,Verdana, Tahoma, Helvetica;}
+table.SubEditCat td {font-family: Tahoma !important;}
+/* ------------------------------------------------- */
+#bodyDecoratorContainer{
+  min-height: 100%;
+  height: auto;
+  margin-bottom: -25px;
+}
+* html #bodyDecoratorContainer{
+  height: 100%; 
+}
+#environmentTitlebar {
+  height: 38px;
+  line-height: 25px;
+  white-space: nowrap;
+}
+#environmentTitlebar #pageTitle, #environmentTitlebar #pageContext, #environmentTitlebar #breadcrumb{
+  line-height: 25px;
+}
+#environmentTitlebar #pageTitle {
+  float:left;
+  padding-left:10px;
+  margin-top:0.3em;
+}
+#environmentTitlebar #pageContext {
+  float:left;
+  margin-top:0.57em;
+  padding-left:10px;
+}
+#environmentTitlebar #breadcrumb{
+  float:left;
+  margin-top:0.6em;
+  padding-left:15px;
+}
+#environmentTitlebar .links{
+  float: right;
+  margin-top: 0.6em;
+  margin-right:1em;
+}
+#environmentTitlebar .asiDropDown ul{
+  margin-top:20px;
+}
+#mainContent{
+  float: right;
+  width: 100%;
+  margin-left: -200px;
+}
+#environmentContent.simplePopup{
+  margin-left: 0;
+  border-left: 0;
+}
+#mainNavigation{
+  width: 200px;
+  margin-right: -1px;
+  float: left;
+  overflow: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+}
+#frameworkDividerContainer{
+  position: absolute; 
+  top:0; 
+  left: 200px;
+  height: 100%;
+  width: 7px;
+  overflow: hidden;
+  z-index: -1;
+}
+*>#frameworkDividerContainer{
+  z-index: 0;
+}
+#frameworkDivider{
+  margin-top: 106px;
+  height: 100%;
+  width: 1px;
+}
+#footer{
+  padding-right: 15px;
+  height: 15px;
+  clear: both;
+}
+/* Collapsed navigation (no navigation menu) */
+.noMenu #environmentContent{
+  margin-left: 0;
+  border-left: 0;
+}
+.noMenu #mainContent{
+  margin-left: 0;
+}
+.noMenu #mainNavigation, .noMenu  #frameworkDividerContainer{
+  display: none;
+}
+
+.print h1{
+  margin: 10px;
+}
+.print img.toggleFavorite{
+  display: none;
+}
+/* AN-40927: WebKit-specific workaround to ensure left nav visibility */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #mainNavigation > div {
+    position: absolute;
+    width: 200px;
+  }
+}
+#environmentTitlebar{
+  background: #404040 url(../img/portal_header_bg.gif) repeat-x top left;
+}
+#environmentTitlebar, #environmentTitlebar a, #environmentTitlebar span{
+  color: black;
+}
+#optionsToggleContainer > a{
+  color: #1C96C0;
+  padding-right: 20px;
+  background: url(../img/skins/default/dropdown_blue.gif) no-repeat center right;
+}
+#optionsToggleContainer > a:hover{
+  color: #F4AC00;
+  background: url(../img/skins/default/dropdown_orange.gif) no-repeat center right;
+}
+#environmentTitlebar #optionsToggleContainer > a{
+  font-weight: bold;
+}
+#environmentTitlebar #pageTitle {
+  font-family: Arial, Tahoma, Verdana;
+  font-size:20px;
+  font-weight: normal;
+}
+#environmentTitlebar #pageContext {
+  font-family: Verdana, Arial, Tahoma, Helvetica;
+}
+#environmentTitlebar #breadcrumb{
+  font-family: Arial, Verdana, Tahoma, Helvetica;
+}
+#mainContent{
+  background: white;
+}
+
+#environmentContent.simplePopup{
+  border-left: 0;
+}
+#mainNavigation{
+  border-right: 1px solid #333;
+}
+#frameworkDivider{
+  background-color: #333;
+}
+#footer{
+  text-align: right;
+  font-size: 11px;
+  color: #333;
+}
+/* Collapsed navigation (no navigation menu) */
+.noMenu #environmentContent{
+  border-left: 0;
+}
+.print h1{
+  font-size: 15px;
+}
+.messageBar{
+  padding:5px 13px 5px 13px;
+  line-height: 20px;
+  position:relative;
+}
+.messageBar a img{ 
+  position:absolute;
+  top:9px;
+  right:5px;
+}
+.portletBody div.messageBar, #currentTasks div.messageBar{
+  display:none;
+}
+.navSectionTitle{
+  cursor: pointer;
+}
+div.navigationLinks{
+  clear: both;
+}
+.navigationLinks a, .navigationLinks .message{
+  display: block;
+  padding: 3px 0 3px 7px;
+}
+.navigationLinks a img{
+  margin-top:1px;
+  vertical-align:top;
+}
+.navigationLinks .whitePagesNavLinks a{
+  float: left;
+}
+#mainNavigation .peopleNav .search, #mainNavigation form, .search{
+  padding: 10px 0 10px 10px;
+  text-align: center;
+}
+#mainNavigation .peopleNav .search input, #mainNavigation  form input, .search input{
+  width: 150px;
+}
+#rulesPalette .search{
+  padding: 8px 0 8px 8px;
+  height: 23px;
+}
+#rulesPalette .search input{
+  width: 180px;
+}
+#mainNavigation .documentsNav form{
+  text-align:left;
+}
+#mainNavigation .documentsNav form input{
+  width:165px;
+}
+#mainNavigation .peopleNav search{
+  text-align: center;
+}
+#mainNavigation form{
+  text-align: left;
+  margin:0;
+}
+.rulesNav #searchRules {
+  text-align: center;
+}
+#mainNavigation .peopleNav .search input, #mainNavigation form input{
+  width: 150px;
+}
+#mainNavigation .peopleNav h4{
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  padding: 5px 0;
+}
+#mainNavigation .peopleNav h4 select{
+  width: 155px;
+}
+#peopleListContainer{
+  border: 1px solid white;
+  height: 330px;
+  padding-bottom: 20px;
+  overflow: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+#peopleListContainer a{
+  display: block;
+  width:200px;
+  overflow:hidden;
+  white-space:nowrap;
+}
+#peopleListContainer .asiGridPaging a{
+  display:inline !important;
+  width:auto;
+}
+#peopleListContainer .asiGridPagenum{
+  display:none;
+}
+#peopleListContainer tr.asiGridNoResults{
+  height: 50px;
+}
+#peopleListContainer span.photocontainer{
+  display: inline-block;
+  width: 36px;
+  margin: 0 4px;
+  text-align: center;
+}
+#peopleListContainer .innerSuggestionDiv{
+  margin: 2px 0;
+}
+div#km_quota{
+  padding: 8px 4px 8px 8px;
+}
+#docNavSpace{
+  width: 60px;
+  height: 9px;
+  margin: 0 auto;
+  float:left; 
+  margin-top:1px;
+}
+#docNavSpaceFill{
+  height: 9px;
+}
+.messageBar{
+  background-color: #FEFEB0;
+  font-weight:bold;
+}
+.navSectionTitle{
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+  padding: 0 0 0 20px;
+  background: url(../../framework/navigation/img/nav_arrows.gif) 5px -16px no-repeat;
+  margin: 5px 0;
+}
+.navSectionTitle.collapsed{  
+  background-position: 5px 2px;
+}
+#mainNavigation, .navigationLinks a, .navigationLinks a:hover{
+  font-size: 11px;
+  color: black;
+}
+.navigationLinks .whitePagesNavLinks a{
+  width: 20px;
+  text-align:center;
+  padding: 3px 0;
+}
+.navigationLinks a:hover{
+  background: #DCE3E8;
+}
+.navigationLinks .navigationFind input{
+  border-bottom: 1px solid gray;
+  font-size: 11px;
+}
+.navigationLinks .navigationFind a, .navigationLinks .showAsLink a{
+	 color: #4271c6;
+}
+.navigationLinks .navigationFind a:hover, .navigationLinks .showAsLink a:hover{
+	 color: #f93;
+	 background: transparent;
+}
+#mainNavigation .peopleNav .search, #mainNavigation form, .search{
+  background: #fffbff url(../../framework/img/leftnav_bg.gif) repeat-x;
+  border: 1px solid #ddd;
+}
+#mainNavigation .peopleNav h4 select, #mainNavigation .peopleNav .search input, #homeNav form input, #mainNavigation form input, .search input{
+  font-size: 10px;
+  border: 1px solid #ddd;
+}
+#peopleListContainer .asiGridOuterContainer a{
+  font-size: 11px;
+  color: black;
+  margin-left:-10px;
+}
+#peopleListContainer .asiGridPaging a{
+  margin-left:0;
+}
+#peopleListContainer a:hover, #peopleListContainer div.selected a{
+  background: #DCE3E8;
+  color: black !important;
+}
+#peopleListContainer img.userPhoto{
+  width: 30px;
+  height: 40px;
+  border: 1px solid black;
+  margin: 2px 5px;
+}
+#peopleListContainer img.groupFolder{
+  width: 30px;
+  height: 40px;
+  margin: 0 9px 0 6px;
+}
+#peopleListContainer img.toggleFavorite{
+  margin-right: 3px;
+}
+#autocompleteSuggestionTarget{
+  width:170px;
+  margin-left:10px;
+}
+#autocompleteSuggestionTarget div{
+  border: 0;
+  overflow:hidden;
+}
+#autocompleteSuggestionTarget .asiGridHeaderBackdrop{
+  background-color: white !important;
+}
+#asi_grid_leftnav_grouptypes td, #asi_grid_leftnav_groupmembers td{
+  border: 0;
+}
+#asi_grid_leftnav_groupmembers th, #asi_grid_leftnav_grouptypes th{
+  display:none;
+}
+#frmQuickSearch img{
+  cursor: pointer;
+}
+#docNavSpace{
+  background-color: #DEDEDE;
+  border:1px solid #666;
+}
+#docNavSpaceFill{
+  background: url(../../framework/img/usage.gif) repeat left center; 
+}
+.inlineErrorMessage {
+  color: #990000;
+}
+.inlineErrorMessage .quotaMessage {
+  color: #000;
+}
+#userManagementTabs, #groupManagementTabs{
+  margin-top:3px;
+}
+#indicatorGrid td.asiGridTD0, #indicatorGrid td.asiGridTD3, #indicatorGrid td.asiGridTD4{
+  text-align:center;
+}
+.dynamicFilter{
+  margin-bottom:3px;
+}
+.dynamicFilter .iText{
+  width: 200px;
+}
+.dynamicFilter input.Picker{
+  width: 190px;
+}
+.dynamicFilter span.inputMode br{
+  display: none;
+}
+.dynamicFilter span.inputMode, .dynamicFilter span.inputMode span{
+  display: inline !important;
+}
+.dynamicFilter .editableSelect input{
+  top: 3px;
+  font-size: 11px;
+}
+.dynamicFilter .editableSelect>input{
+  margin-top: -1px;
+  border-left-width: 1px;
+}
+.filterError{
+  color: red; 
+  margin-left: 25px;
+}
+.noSavedReports{
+  margin: -10px 0 10px 15px;
+}
+.asiReportPalette{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  font-size: 11px;
+  z-index: 1;
+  width:175px;
+}
+div.asiReportPalette.viewsPalette {
+  width: 170px;
+}
+.asiReportPalette.viewsPalette a{
+  display:block;
+}
+.asiReportPalette.viewsPalette a:hover{
+  background: #DCE3E8;
+  color:#f93;
+}
+.asiReportPalette img{
+  margin: 5px;
+}
+.asiReportPalette .header{
+  margin: 5px 0 0 5px;
+  font-size: 12px;
+  clear:both;
+  font-weight: normal;
+}
+.asiReportPalette label{
+  display:block;
+}
+.asiReportPalette input{
+  vertical-align: middle;
+}
+.asiReportPalette select{
+  font-size: 11px;
+  vertical-align: middle;
+  margin-left:3px;
+}
+.asiReportPalette fieldset, .asiReportPalette form{
+  border: 0;
+  margin: 0 0 0 5px;
+}
+.asiReportPalette form{
+  margin-left: 0;
+}
+.asiReportPalette input.iBlueButton{
+  float: right;
+  margin: 10px 5px 5px 0;
+}
+.asiReportPalette.filtersPalette{
+  width: 250px;
+  min-width: 100px;
+}
+.asiReportPalette.filtersPalette a { 
+  white-space:normal;
+  display: inline;
+}
+.asiReportPalette.filtersPalette.emptyPalette{
+  width:auto;
+}
+*+html .asiReportPalette.filtersPalette.emptyPalette{ 
+  width:200px;
+  text-align:center;
+}
+*+html .asiReportPalette.filtersPalette.emptyPalette *{
+ float:none;
+}
+.asiReportPalette.filtersPalette label{
+  line-height: 22px; 
+  padding:3px;
+  margin-top: 2px;
+}
+.asiReportPalette.filtersPalette span.filterLabel{
+  width: 40%;
+  text-align:right;
+  float:right;
+  }
+.asiReportPalette.filtersPalette span.filterSelect{
+  width: 60%;
+  text-align: left;
+  float:right;
+}
+.asiReportPalette.filtersPalette select{
+  margin: 1px;
+}
+.asiReportPalette .paletteQuickLinks{
+  clear:both;
+  float: right;
+  margin: 3px 10px;
+}
+.asiReportGraph{
+  width: 98%;
+  padding-bottom: 20px;
+  overflow-y: hidden;
+  overflow: auto;
+}
+#reportsFolderList{
+  width: 95%;
+  margin: 20px auto;
+}
+#reportsFolderList .item{
+  cursor: pointer;
+  text-align:center;
+  width:120px;
+  height: 100px;
+  float: left;
+  overflow: hidden;
+}
+#reportsFolderList .item img{
+  display: block;
+  width: 70px;
+  margin: 0 auto;
+}
+.dialogSection.configFilter{
+  height:320px;
+  max-height:320px;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.dialogSection.defltFilters{
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.dialogSection.quickFilters{
+  height:150px; 
+  width:645px !important; 
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+*html .dialogSection.editFilterSetGrid{
+  height:460px;
+}
+.dialogSection.editFilterSetGrid{  
+  max-height:460px;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.userProfilePhoto
+{
+  width:60px;
+  height:80px;
+}
+a.activequickfilter{
+  font-weight: bold;
+  text-decoration: underline;
+}
+img.priorityIconToken{
+  height: 12px;
+}
+.asiReportPalette{
+  background: url(../../analytics/img/topgradient.gif) top left repeat-x;
+  border:1px solid #7c7c7c;
+  background-color:#fff;
+}
+.asiReportPalette.viewsPalette{
+  width: 100px;
+}
+
+img.collabImage{
+  margin:2px;
+  max-height:100px;
+} 
+label.labelHidden{
+  display: none;
+}
+/* Orange Header */
+div.dPortletCustHead{
+  padding: 2px;
+  border: 1px solid #999;
+  background-color: #f90;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+/*********************************
+ Detail Pages
+*********************************/
+#tasksShowAll li, #processesShowAll li{
+  width: 180px;
+}
+#tasksShowAll li ul, #processesShowAll li ul, #tasksContextMenu li ul, #processContextMenu li ul{
+  width: 140px;
+}
+#tasksShowAll ul li, #processesShowAll ul li, #tasksContextMenu ul li, #processContextMenu ul li{
+  width: 133px;
+}
+/* == Grids == */
+#apGetTasks, #apGetProcesses, #groupListGrid{
+  height: 270px;
+  min-height: 270px;
+}
+*>#groupListGrid{
+  height: auto;
+}
+#apGetTasks .asiGridTH1 a, #apGetProcesses .asiGridTH1 a{
+  margin-left: 8px;
+}
+ /* Grid Toolbars */
+#toolbarNew{
+  width: 70px;
+}
+#toolbarNew li>ul{
+  width: 100px;
+}
+#toolbarNew ul>li{
+  width: 87px;
+}
+.detailpage>.asiToolbar a{
+  padding: 0 4px 4px;
+}
+ /*Pane sizing */
+ .maximized #apGetTasks, .maximized #apGetProcesses, .maximized #apGetProcessModels,.maximized #groupListGrid{
+  display: none;
+}
+.minimized #detailPane{
+  height: 20px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+#detailPane .asiGridContainer td{
+  line-height: 19px;
+}
+#dStartView .itemHeader{
+  margin: 1px;
+}
+#dStartView .itemHeader {
+  width:auto;
+}
+#detailPane .itemHeader{
+  margin-bottom: 2px;
+}
+#dStartView .itemHeader{
+  padding: 0 0 5px;
+}
+#detailPageFull .itemHeader{
+  width: auto;  
+  padding: 7px 5px 0 5px; 
+  background: #e7ebef;
+  border-top: 1px solid #b5b2b5;
+}
+#detailPageFull .itemHeader img{
+  margin-right: 3px;
+  vertical-align: middle;
+}
+#detailPageFull .startProcessButton a{
+  float:right;
+  margin: 10px 40px 10px 10px;
+  width: 160px;
+  height: 30px;
+}
+#detailPane .metadata, #detailPageFull .metadata{
+  text-align: left;
+  font-size: 11px;
+  margin: 0 5px;
+  width: 250px;
+  margin-right: 50px;
+}
+#detailPageFull .metadata{
+  width: auto;
+  padding: 3px 0 10px 27px;
+} 
+#dStartView .metadata{
+  width: 150px;
+  margin-right: 30px;
+}
+#detailPane .metadata.unlabeled, #dStartView .metadata.unlabeled, #groupDetails .metadata.unlabeled{
+  width: auto;
+}
+#detailPane .metadata strong, #groupDetails .metadata strong{
+  margin-right: 5px;
+  float: left;
+}
+#dStartView .taskName, .itemHeader .header {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  padding: 5px;
+}
+#dStartView .processName{
+  font-size: 11px;
+  padding-top: 0;
+  margin-bottom: 5px;
+}
+#detailPane .emptyMessage{
+  position:relative;
+  text-align: center;
+  margin: -1px 0 0;
+  padding: 20px 0 400px;
+  font-size: 11px;
+}
+/* Process Detail: Task Listings */
+#currentTasks .asiGrid td .asiToolbar img{
+  margin-right: 0;
+}
+#detailPane .taskData{
+  padding-left: 100px;
+  height: 110px;
+  position: relative;
+  line-height: 20px;
+  font-size: 11px;
+}
+#detailPane .thumbnail{
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+#detailPane .taskData h3, #detailPane .taskData h3 a{
+  font-size: 12px;
+  margin: 0;
+}
+#detailPane .taskData .asiToolbar{
+  margin: 0 0;
+}
+#detailPane .taskData .asiToolbar a{
+  float: left;
+}
+#detailPane #attachments{
+  position: relative;
+}
+#detailPane #attachments form{
+  margin-top:0;
+}
+.deemphasis{
+  color: #999;
+}
+.cellContent{
+  float: left;
+}
+.cellCaption{
+  float: right;
+}
+/*********************************
+ Detail Pages
+*********************************/
+ /* Grid Toolbars */
+#detailPane .asiToolbar{
+  background-color: #e2e4e6;
+  border-top: 3px outset;
+  border-bottom: 1px solid #688889;
+}
+/* Detail Views */
+#detailPane{
+}
+#dStartView .itemHeader{
+  border-bottom: 1px solid #a0b6d0;
+}
+#detailPane .metadata, #dStartView .metadata, .detailpage .metadata{
+  font-weight: normal;
+}
+ .itemHeader .header, #dStartView .taskName{
+  font-weight: bold;
+}
+#dStartView .taskName, .itemHeader .name{
+  color: white;
+  border: 1px solid #a0b6d0;
+  background: #a2b7ca;
+}
+#dStartView .processName{
+  font-weight: normal;
+}
+/* Task Extras */
+#detailPane .emptyMessage{
+  background: white;
+}
+/* Process Detail: Task Listings */
+#detailPane .alternate{
+  background-color: #ebebeb;
+}
+#detailPane .taskData .asiToolbar{
+  background: transparent;
+  border: 0;
+}
+#detailPane .taskData .asiToolbar a{
+  border-color: white;
+}
+
+#detailPane .alternate .asiToolbar a{
+  border-color: #ebebeb;
+}
+
+#detailPageFull .asiFlatTabs{
+  background-color: #e7ebef; 
+}
+.asiSpacer{
+  clear: both;
+  height:0 !important;
+  overflow: hidden;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+* html .clearfix {
+  height: 1%;
+}
+.asiDivider{
+  height: 1px !important;
+  overflow: hidden;
+  margin: 2px;
+  clear: both;
+}
+.asiDividerThick{
+  height: 3px !important;
+  overflow: hidden;
+  margin: 2px;
+  clear: both;
+}
+.asiWait{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 11px;
+}
+.asiExpressionEditor .asiWait{
+  height: 300px !important;
+  margin: 5px;
+}
+.asiPicker .asiWait{
+  height: 300px !important;
+  margin: 5px;
+}
+.formArea{
+  width: 600px;
+  position: relative;
+  margin: 5px auto;
+}
+#dStartView .workArea .formArea{
+  width:100%;
+}
+img.toggleFavorite{
+  cursor: pointer;
+}
+.backingIframe{
+  position: absolute;
+  filter: alpha(opacity=0);
+}
+div.feedbackPopup{
+	width:630px;
+	height:440px;
+	overflow:auto;
+}
+div.userPopupPic{
+	position:absolute;
+	left:13%;top:40px;
+	z-index: 1;
+	overflow:hidden;
+}
+span.photo img{
+	width:60px; 
+	height:80px;
+	overflow:hidden;
+}
+/*common page layouts*/
+.simplePage .pageMeta{
+  line-height:18px;
+  padding:5px 10px;
+}
+.simplePage .pageMeta a.help{
+  float:right;
+}
+.simplePage .pageFooter{
+  padding:5px 10px;
+}
+/*warning - inline but separate section with optional links section*/
+.warningSection, .infoSection{
+  width:70%;
+  margin:30px auto;
+  padding:10px;
+}
+.infoSection{
+  text-align:center;
+}
+.warningSection .warningMsg{
+  margin-left:35px;
+  text-align:left;
+}
+.warningSection .actionLinks{
+  margin-top:10px;
+  padding-top:3px;
+  text-align:right;
+}
+.warningSection .actionLinks img{
+  margin:0 5px;
+}
+.asiDivider, .asiDividerThick{
+  background-color: #999;
+}
+.asiWait{
+  background: url(../../components/img/waiting_animated.gif) no-repeat center;
+  color: #333;
+}
+.formArea{
+  background: white;
+  border: 1px solid #a0b6d0;
+}
+#dStartView .workArea .formArea{
+  border:none;
+}
+.fauxAnchor{
+  color: #333 !important;
+  cursor: default !important;
+}
+.cogitating *{
+  cursor: wait !important;
+}
+.disabled, .asiForm li.disabled div.legend,
+.asiForm li.readOnly div.fields textarea,
+.asiForm li.readOnly div.fields input{
+  color: #a1a1a1 !important;
+}
+#wait_indicator{
+  background: #ccc;
+  height: 46px;  /* Explicit height needed so that height:100% in child IFRAME works in IE */
+  position: absolute;
+  font-weight: bold;
+  font-size: 11px;
+  z-index: 500;
+  opacity:.80;
+  border: 1px solid white;
+}
+#wait_indicator div{  
+  padding: 13px 40px;
+  border: 1px solid #787c81;
+  background: #ccc;
+}
+#wait_indicator img{
+  margin-right: 25px;
+  width: 22px;
+  height: 22px;
+}
+/*common page layouts*/
+.simplePage{
+  font-size:11px;
+}
+.simplePage .pageMeta{
+  background-color:#e7ebef;
+  font-size:11px;
+}
+.simplePage .pageMeta .title{
+  font-size:13px;
+  font-weight:bold;
+}
+.simplePage .pageFooter{
+  font-size:11px;
+}
+/*warning - inline but separate section with optional links section*/
+.warningSection, .infoSection{
+  font-size:12px;
+  border:dotted 1px #c2c8ce;
+  background:#eaedf2 url(../../components/img/error.gif) no-repeat 10px 10px;
+}
+.infoSection{
+  background:#eaedf2;
+}
+.warningSection .actionLinks{
+  border-top: solid 1px #c2c8ce;
+}
+.warningSection .actionLinks a{
+  text-decoration:underline;
+}
+/* == Portal Page Headers == */
+.asiPortalPageHeader, asiDialog.fullWindow .asiPortalPageHeader{
+  width: 100%;
+  display:none;
+  position:relative;
+  z-index: 46;
+  vertical-align: center;
+}
+asiDialog.fullWindow .asiPortalPageHeader h1, .asiPortalPageHeader h1, .asiPortalPageHeader h2, .asiPortalPageHeader h3, .asiPortalPageHeader h4, .asiPortalPageHeader h5, .asiPortalPageHeader h6{
+  padding-left: 5px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 30px;
+}
+.asiPortalPageHeader h1 img{
+  padding: 5px;
+}
+.asiPortalPageHeader p, .asiForm .asiPortalPageHeader p{
+  display:block;
+  clear: both;
+  font-size: 11px;
+  margin: 0;
+  margin-left: 34px !important;
+  padding-bottom: 2px;
+  width: 85%;
+}
+#crumbContainer *, #crumbContainer a{
+  font-size: 11px;
+}
+/* Within other components */
+.asiPicker .asiPortalPageHeader{
+  display: none;
+}
+/* == Portal Page Headers == */
+.asiPortalPageHeader, asiDialog.fullWindow .asiPortalPageHeader{
+  background: #3f6d90;
+  border-bottom: 1px solid #688889;
+}
+asiDialog.fullWindow .asiPortalPageHeader h1, .asiPortalPageHeader h1, .asiPortalPageHeader h2, .asiPortalPageHeader h3, .asiPortalPageHeader h4, .asiPortalPageHeader h5, .asiPortalPageHeader h6{
+  font-weight: bold;
+  color: white;
+}
+.asiPortalPageHeader h3, .asiPortalPageHeader h2, .asiPortalPageHeader h4{
+  background: #bdd3e7;
+  color: #517890;
+  border-left: 1px solid #688889;
+  border-right: 1px solid #688889;
+}
+.asiPortalPageHeader p, .asiForm .asiPortalPageHeader p{
+  color: white;
+}
+.asiPortalPageHeader a{
+  color: white;
+  font-weight: bold;
+}
+#crumbContainer *, #crumbContainer a{
+  color: white;
+  font-weight: normal;
+}
+#crumbContainer a:hover{
+  color: #f90;
+}
+input.iBlueButton, input.iOrangeButton{
+  font-size: 12px;
+  padding: 1px 5px;
+  height: 21px;
+  text-align: center;
+  width: auto;
+  margin-bottom: 3px;
+}
+#asiAlert p .iBlueButton{
+  margin: 0 5px;
+}
+.asiForm .iButtons, .asiDialog form .iButtons, .iButtons{
+  clear: both;
+  float: none;
+  width: auto;
+}
+.asiForm input.iButtons{
+  font-size: 11px;
+}
+.asiForm .iButtons input, .asiDialog form .iButtons input{
+  margin: 0 .5px 0;
+}
+.asiForm .iButtons input.cancel, .asiDialog form .iButtons input.cancel{
+  margin-left: 5px;
+}
+.asiForm input.iBlueButton{
+  width: auto;
+  padding: 1 5px;
+  text-align: center;
+}
+.iButtons, .asiForm div.iButtons{
+  margin-top: 5px;
+  padding: 10px 0 5px;
+  text-align: center;
+}
+.asiTreeContainer .iBlueButton{
+  margin-left: 80px;
+}
+.errorPage .searchBox input.iButton{
+  font-size: 12px;
+  padding: 1px 5px;
+  width: 50px;
+  height: 21px;
+  text-align: center;
+}
+input.iBlueButton, input.iOrangeButton{
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Support disabling in Chrome. */
+input.iBlueButton:disabled, input.iOrangeButton:disabled {
+  color: gray;
+}
+input.iBlueButton{
+  border: 1px solid #737373;
+}
+input.iOrangeButton, .asiDialog .asiForm input.iOrangeButton{
+  border: 1px solid #737373;
+}
+.asiForm input.iButtons{
+  border: 1px solid #737373;
+}
+/*.iButtons, .asiForm div.iButtons{
+  border-top: 1px solid #a0b6d0;
+}*/
+.asiPicker .iBlueButton{
+  color: black;
+}
+.asiTreeContainer .iBlueButton{
+  border: 1px solid #737373;
+}
+.errorPage .searchBox input.iButton{
+  color: black;
+  cursor: pointer;
+  background: #E8E8E8 url(../../portal/img/ibutton.gif);
+  border: 1px solid #737373;
+}
+input.iBlueButton:hover input.ibutton:hover input.iOrangeButton:hover{
+  color: red;
+}
+textarea.iText, input.iText, input.iFile {
+  border: 1px solid #a0b6d0 !important;
+  padding-left: 2px;
+  font-size: 11px;
+  width: 90%;
+}
+textarea.iText.noWidth, input.iText.noWidth, input.iFile.noWidth{
+  width:auto;
+}
+.asiGrid input.iText, .asiGrid input.editable, .asiGrid input.expText, .asiGrid input.Picker{
+  border: 1px solid #a0b6d0 !important;
+  margin: 2px;
+}
+.asiForm .fields label input.iFile{
+  width: 91%;
+}
+.asiTreeContainer .iText{
+  border: 1px solid white;
+}
+.asiTreeContainer .iText{
+  border: 1px solid #369;
+}
+.booleanExpression .iText.asiPicker2{
+  width: 100px !important;
+}
+textarea.iText, input.iText, input.iFile {
+  border: 1px solid #a0b6d0;
+}
+.asiGrid input.iText{
+  border: 1px solid #a0b6d0 !important;
+}
+.asiTreeContainer .iText{
+  border: 1px solid white;
+}
+.asiTreeContainer .iText{
+  border: 1px solid #369;
+}
+.tabular{
+  margin: 4px 0;
+  padding: 0;
+}
+.tabular label{
+  float: left;
+  width: 25%;
+}
+.tabular .tabularData{
+  float: right;
+  text-align: left;
+  width: 73%;
+}
+.tabular.thin label{
+  width: 16%;
+}
+.tabular.thin .tabularData{
+  width: 82%;
+}
+.tabular.wide label{
+  width: 35%;
+}
+.tabular.wide .tabularData{
+  width: 65%;
+}
+.profileMetadata{
+  position: relative;
+  height: 100px;
+  padding-left: 172px;
+  font-size: 11px;
+  line-height: 22px;
+}
+.profileMetadataPhoto{
+  position: absolute;
+  top: 42px;
+  left: 40px;
+}
+.profileMetadataPhoto img{
+  vertical-align: top;
+}
+
+img.userPhoto {
+  width:60px;
+  height:80px;
+  vertical-align: top;
+}
+
+* html img.large{
+  width: 60px;
+  height: 80px;
+  position: static;
+}
+
+* html img.small{
+  width: 30px;
+  height: 40px;
+  position: static;
+}
+
+img.profile.large{
+  max-width: 60px;
+  max-height: 80px;
+}
+
+img.profile.small{
+  max-width: 30px;
+  max-height: 40px;
+}
+.profileMetadata{
+  border-bottom: 1px solid #a0b6d0;
+}
+
+img.profile{
+  border: 1px solid #444;
+}
+.tabular{
+  border-width: 0 !important;
+}
+.tabular label{
+  font-weight: bold;
+}
+/*=editableselect dropdown*/
+.es{
+  width:90%;
+  white-space:nowrap;
+}
+.es .es_text{
+  width:69%;
+  height:16px;
+  padding-left:2px;
+}
+.es a{
+  margin:3px 0 0 3px;
+}
+.es .es_button{
+  height:16px;
+  width:12px;
+  /*margin:3px;*/
+}
+/*time menu*/
+.es.timeMenu{
+  display:inline;
+  width:auto;
+}
+.es.timeMenu .es_text{
+  width:80px;
+}
+/*menu (dropdown) options*/
+#menu_container ul{
+  position:absolute;
+  z-index:101; /* to be able to show it in a dialog */
+}
+#menu_container ul li{
+  white-space: nowrap;
+  padding: 2px 0 2px 3px;
+  height:13px;
+  display:block;
+  clear:both;
+}
+#menu_container ul li .menuText{
+  display:block;
+  float:left;
+}
+#menu_container ul li .expand{
+  display:block;
+  float:right;
+  margin-right:4px;
+}
+#menu_container .menuIframe{
+  position: absolute;
+  z-index:100;
+}
+/*=editableselect dropdown*/
+.es .es_text{
+  border: 1px solid #a0b6d0;
+}
+.es .es_button{
+  border:none;
+  background:url(../../portal/img/dropdown_black.gif) top center no-repeat;
+}
+/*menu (dropdown) options*/
+#menu_container ul{
+  background: white;
+  border:1px solid black;
+}
+#menu_container ul li{
+  cursor:pointer;
+}
+#menu_container ul li.hover{
+  background: #789fbb;
+}
+#menu_container .menuIframe{
+  filter: alpha(Opacity: 0);
+}
+.portletMessage {
+  padding-left: 22px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+.portletColumn{
+  overflow-x: auto;
+  overflow-y: visible;
+}
+.portletColumn .targetArea{
+  display: none;
+  line-height: 30px;
+}
+.portletColumn.moveTargets .targetArea{
+  display: block;
+}
+.portlet{
+  padding: 0;
+  overflow: visible;
+  font-size: 11px;
+}
+.portletControls{
+  float: right;
+  text-align: right;
+}
+.portletControls a, .portletOptions a{
+  margin: 0 2px;
+}
+.portletHeader{
+  width: auto;
+  padding: 4px 2px 4px 5px;
+  margin: 0;
+}
+.portletOptions{
+  padding: 2px 10px;
+  clear: both;
+  display: none;
+}
+.portlet.admin .portletOptions{
+  display: block;
+}
+.portletBody{
+  width: auto;
+  overflow: hidden;
+  overflow-y: hidden;
+  padding: 0 2px 5px 2px;
+  margin: 0px;
+  margin-top: 2px;
+}
+.portlet.portletPlain .portletHeader.viewerMode{
+  display:none;
+}
+.portletBody .asiForm li.htmlArea .legend{
+  display: none;
+}
+.portletBody .asiForm li.htmlArea .fields{
+  padding-left: 0;
+  margin: 0px -10px 0 5px;
+  float: left;
+  width: 100%;
+}
+.portletBody .formArea{
+  width: auto;
+}
+.portletBody .workArea{
+  width: 99%;
+  margin: 5px;
+  border: 0;
+}
+.portletBody .asiForm{
+  margin-top: 0;
+}
+/*portlet options popups*/
+.customAccessUserGrid{
+  width:100%;	
+  height:270px;
+  overflow:auto;
+  padding-top:15px;
+  text-align:left;
+}
+.customAccessUserGrid table{
+  margin:auto;
+  width:90%;
+}
+.customAccessUserGrid div.asiToolbar{
+  margin:0 -8px 0 -8px;
+}
+.portletBody #dStartView .metadata.unlabeled{
+  float: none;
+}
+.portletBody .portletError{
+	font-weight:bold;
+	color: #990000;
+}
+.headerWithinChannel{
+  background-color: #e7e7e7;
+  padding:3px;
+  line-height: 1.5;
+}
+/*"Basic" portlet template special styling*/
+div.enduser_content .portletPlain .portletHeader{
+  display:none;
+}
+.portlet.portletPlain{
+  margin: 0;
+}
+.portletPlain .portletBody{
+  margin: 0;
+  padding: 0;
+}
+.portletPlain div.asiGridOuterContainer{
+  border-color: #cccccc;
+  border-style: none none solid none;
+  border-width: 0 0 1px 0;
+}
+.portletTitleFrame .asiGridOuterContainer{
+  border: 0 !important;
+  border-top: 1px solid #bbbbbb !important;
+}
+.portletPlain .mini{
+  margin: 8px;
+}
+/*"Classic" portlet template special styling*/
+.portletDefault .asiGridOuterContainer{
+  border: 0 !important;
+}
+/*Non-Basic portlet template styling*/ 
+.portlet{ 
+  margin: 7px 10px 11px 10px; 
+} 
+#leftColumn .portlet, #leftColumn .portlet{ 
+  margin-right: 0; 
+} 
+#rightColumn .portlet, #rightColumn .portlet{ 
+  margin-left: 0; 
+} 
+.portlet.portletDefault{ 
+  margin-top: 10px; 
+}
+.portletMessage {
+  background: url(../../components/toolbar/img/blueinfo.gif) no-repeat left center;
+  background-color: #ffffe1;
+  font-weight: bold;
+}
+.portlet{
+}
+.portletColumn .targetArea{
+  text-align: center;
+  background: #fc6;
+  font-weight: bold;
+  color: #630;
+  border: 1px #c60 solid;
+}
+.portletColumn .targetArea:hover{
+  color: #c60;
+}
+.portletHeader{
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+}
+.portlet.portletDefault .portletHeader{
+  background: #7B7B7B;
+  /*border-bottom: 1px solid #CECECE;*/
+  border: 0;
+  color: white;
+}
+.portlet.portletDefault, .portlet.portletTitleFrame{
+  border: 1px solid #9d9d9d;
+}
+.portlet.portletDefault .portletControls a{
+  color: white;
+}
+.portlet.portletDefault .portletControls a:hover{
+  color: #f93;
+}
+.portletControls{
+  font-weight: normal;
+  font-size: 11px;
+}
+.portletOptions{
+  color: white;
+  background-color: #999;
+}
+.portletOptions a{
+  color: white;
+}
+.portlet .asiGridOuterContainer{
+  border: 1px solid #999;
+}
+img.iPortletIcon{
+  border: 1px solid;
+  border-color: #ccc #999 #999 #ccc;
+  background-color: #999;
+}
+span.portletTemplates input{
+  float:left;
+  vertical-align:middle;
+  margin-top: 18px;
+}
+span.portletTemplates label{
+  float: left;
+  text-align: center;
+  margin: 0 15px 5px 5px;
+  width: 70px;
+  padding: 3px;
+}
+span.portletTemplates label img{
+  display:block;
+}
+div.launchPortletHeader{
+	font-size: 12px;
+	font-weight: bold;
+	margin:0;
+}
+.wsrp {
+  overflow:auto;
+}
+/*=fonts*/
+.portlet-font{
+}
+.portlet-font-dim{
+}
+/*=messages*/
+.portlet-msg-status{
+}
+.portlet-msg-info{
+}
+.portlet-msg-error{
+}
+.portlet-msg-alert{
+}
+.portlet-msg-success{
+}
+/*=sections*/
+.portlet-section-header{
+  text-align:left;  
+  padding:7px;
+}
+.portlet-section-body{
+}
+.portlet-section-alternate{
+}
+.portlet-section-selected{
+}
+.portlet-section-subheader{
+}
+.portlet-section-footer{
+}
+.portlet-section-text{
+}
+/*=tables*/
+.wsrp table{
+  text-align:left;
+  width:100%;
+}
+.wsrp table td{
+  vertical-align:middle;
+}
+.wsrp p table{
+  width:auto;
+}
+.wsrp form table td{
+  text-align:center;
+  padding: 5px 0;
+}
+.wsrp form table td.portlet-section-header,
+.wsrp form table td.portlet-form-label{
+  text-align:left;  
+}
+.wsrp form table td.portlet-form-field{
+  text-align:right;
+  vertical-align:top;
+}
+.portlet-table-header{
+}
+.portlet-table-body{
+}
+.portlet-table-alternate{
+}
+.portlet-table-selected{
+}
+.portlet-table-subheader{
+}
+.portlet-table-subheader td{
+  vertical-align:middle;
+}
+.portlet-table-footer{
+}
+.portlet-table-text{
+}
+/*=forms*/
+.wsrp input{
+  padding:0 2px;
+}
+.portlet-form-label{
+}
+.portlet-form-input-field{
+  width:76%;
+  margin-left: 16px;  
+  float:left;
+}
+.portlet-form-button{
+  font-size: 12px;
+  padding: 1px 5px;
+  height: 21px;
+  text-align: center;
+  width: auto;
+  margin:0 3px 3px 0;
+}
+.portlet-icon-label{
+}
+.portlet-dlg-icon-label{
+}
+.portlet-form-field-label{
+  text-align:right; 
+}
+td.portlet-form-field-label{
+  width:26%;
+}
+.portlet-form-field{
+  text-align:right;
+  vertical-align:top;
+}
+td.portlet-form-field{
+  width:26%;
+}
+/*=menus*/
+.portlet-menu{
+}
+.portlet-menu-item{
+}
+.portlet-menu-item-selected{
+}
+.portlet-menu-item-hover{
+}
+.portlet-menu-item-hover-selected{
+}
+.portlet-menu-cascade-item{
+}
+.portlet-menu-cascade-item-selected{
+}
+.portlet-menu-description{
+}
+.portlet-menu-caption{
+}
+/*=fonts*/
+.portlet-font, 
+.portlet-font-dim,
+.wsrp *{
+  color : #000;
+  font-family : Arial, Verdana, Tahoma;
+  font-size : 11px;
+  font-weight:normal;
+}
+.wsrp a{
+  color:#4271c6;
+}
+.wsrp a:hover{
+  color:#f93;
+}
+.portlet-font-dim{
+  color:#666;
+}
+/*=messages*/
+.portlet-msg-status{
+}
+.portlet-msg-info{
+}
+.portlet-msg-error{
+  font-weight: bold;
+  color: #990000;
+}
+.portlet-msg-alert{
+}
+.portlet-msg-success{
+}
+/*=sections*/
+.portlet-section-header{
+  color:#333;
+}
+.portlet-section-header hr{
+  color: #a0b6d0;
+}
+.portlet-section-body{
+}
+.portlet-section-alternate{
+}
+.portlet-section-selected{
+}
+.portlet-section-subheader{
+}
+.portlet-section-footer{
+}
+.portlet-section-text{
+}
+/*=tables*/
+.wsrp table{
+  border-collapse:collapse;  
+  border:0;
+  border-color: #d4d4d4;
+}
+.wsrp table td{
+  height:24px;
+  padding:0 8px;
+  border-color: #ebebeb #d4d4d4;
+}
+.portlet-table-header{
+  background-color:#bcd0d7;
+}
+.portlet-table-header td{
+  border:0;
+  height:20px;
+  padding:0 20px 0 8px;
+}
+.portlet-table-body{
+  border-color: #d4d4d4;
+}
+.portlet-table-body td{
+  height:24px;
+  padding:0 8px;
+}
+.portlet-table-alternate{
+  background-color: #fbfbfb;
+}
+.portlet-table-selected{
+}
+.portlet-table-subheader{
+}
+.portlet-table-subheader td{
+  height:24px;
+  padding:0 8px;
+}
+.portlet-table-footer{
+}
+.portlet-table-text{
+}
+/*=forms*/
+.portlet-form-label{
+}
+.portlet-form-input-field{
+   border: 1px solid #a0b6d0;
+}
+.portlet-form-button{
+  background: #E8E8E8 url(../../../../../framework/img/ibutton.gif);
+  border: 1px solid #737373;
+  font-weight: bold;
+  cursor: pointer;
+}
+.portlet-icon-label{
+}
+.portlet-dlg-icon-label{
+}
+.portlet-form-field-label{
+  font-weight:bold;
+  color:#333;
+}
+.portlet-form-field{
+  font-weight:bold;
+  color:#333;
+}
+/*=menus*/
+.portlet-menu{
+}
+.portlet-menu-item{
+}
+.portlet-menu-item-selected{
+}
+.portlet-menu-item-hover{
+  background: #DCE3E8;
+}
+.portlet-menu-item-hover-selected{
+}
+.portlet-menu-cascade-item{
+}
+.portlet-menu-cascade-item-selected{
+}
+.portlet-menu-description{
+}
+.portlet-menu-caption{
+}
+/* ********** Import dry run ********** */
+#dryRunResultsContainer{
+  padding:10px;
+}
+#dryRunResultsTextarea{
+  width:100%;
+}
+/* ********** Import dry run ********** */
+.dryRunResultsHeader{
+  font-weight:bold;
+}
+#dryRunResultsTextarea{
+  border:0;
+  font-family:Arial, Verdana, Tahoma, Helvetica;
+}
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.1
+*/
+/* first or middle sibling, no children */
+
+.ygtvtn {
+	width:18px; height:22px; 
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -5600px no-repeat; 
+}
+
+/* first or middle sibling, collapsable */
+.ygtvtm {
+	width:18px; height:22px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -4000px no-repeat; 
+}
+
+/* first or middle sibling, collapsable, hover */
+.ygtvtmh {
+	width:18px; height:22px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -4800px no-repeat; 
+}
+
+/* first or middle sibling, expandable */
+.ygtvtp {
+	width:18px; height:22px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -6400px no-repeat; 
+}
+
+/* first or middle sibling, expandable, hover */
+.ygtvtph {
+	width:18px; height:22px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -7200px no-repeat; 
+}
+
+/* last sibling, no children */
+.ygtvln {
+	width:18px; height:22px; 
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -1600px no-repeat; 
+}
+
+/* Last sibling, collapsable */
+.ygtvlm {
+	width:18px; height:22px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 0px no-repeat; 
+}
+
+/* Last sibling, collapsable, hover */
+.ygtvlmh {
+	width:18px; height:22px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -800px no-repeat; 
+}
+
+/* Last sibling, expandable */
+.ygtvlp { 
+	width:18px; height:22px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -2400px no-repeat; 
+}
+
+/* Last sibling, expandable, hover */
+.ygtvlph { 
+	width:18px; height:22px; cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -3200px no-repeat; 
+}
+
+/* Loading icon */
+.ygtvloading { 
+	width:18px; height:22px; 
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/treeview-loading.gif) 0 0 no-repeat; 
+}
+
+/* the style for the empty cells that are used for rendering the depth 
+ * of the node */
+.ygtvdepthcell { 
+	width:18px; height:22px; 
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-orig.gif) 0 -8000px no-repeat; 
+}
+
+.ygtvblankdepthcell { width:18px; height:22px; }
+
+/* the style of the div around each node */
+.ygtvitem { }  
+
+
+.ygtvitem  table{
+    margin-bottom:0;
+}
+.ygtvitem  td {
+    border:none;padding:0;
+} 
+
+/* the style of the div around each node's collection of children */
+.ygtvchildren {  }  
+* html .ygtvchildren { height:2%; }  
+
+/* the style of the text label in ygTextNode */
+.ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover { 
+	margin-left:2px;
+	text-decoration: none;
+    background-color: white; /* workaround for IE font smoothing bug */
+}
+
+.ygtvspacer { height: 22px; width: 18px; } /*#35368. Having the original width set to 12px caused the spacing to break. See the bug for screenshots. */  
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.1
+*/
+/* first or middle sibling, no children */
+
+.yui-skin-nolines .ygtvtn {
+	width:18px; height:18px; 
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -5600px no-repeat; 
+}
+
+/* first or middle sibling, collapsable */
+.yui-skin-nolines .ygtvtm {
+	width:18px; height:18px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -4000px no-repeat; 
+}
+
+/* first or middle sibling, collapsable, hover */
+.yui-skin-nolines .ygtvtmh {
+	width:18px; height:18px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -4800px no-repeat; 
+}
+
+/* first or middle sibling, expandable */
+.yui-skin-nolines .ygtvtp {
+	width:18px; height:18px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -6400px no-repeat; 
+}
+
+/* first or middle sibling, expandable, hover */
+.yui-skin-nolines .ygtvtph {
+	width:18px; height:18px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -7200px no-repeat; 
+}
+
+/* last sibling, no children */
+.yui-skin-nolines .ygtvln {
+	width:18px; height:18px; 
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -1600px no-repeat; 
+}
+
+/* Last sibling, collapsable */
+.yui-skin-nolines .ygtvlm {
+	width:18px; height:18px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 0px no-repeat; 
+}
+
+/* Last sibling, collapsable, hover */
+.yui-skin-nolines .ygtvlmh {
+	width:18px; height:18px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -800px no-repeat; 
+}
+
+/* Last sibling, expandable */
+.yui-skin-nolines .ygtvlp { 
+	width:18px; height:18px; 
+	cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -2400px no-repeat; 
+}
+
+/* Last sibling, expandable, hover */
+.yui-skin-nolines .ygtvlph { 
+	width:18px; height:18px; cursor:pointer ;
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -3200px no-repeat; 
+}
+
+/* Loading icon */
+.yui-skin-nolines .ygtvloading { 
+	width:18px; height:18px; 
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/treeview-loading.gif) 0 0 no-repeat; 
+}
+
+/* the style for the empty cells that are used for rendering the depth 
+ * of the node */
+.yui-skin-nolines .ygtvdepthcell { 
+	width:18px; height:18px; 
+	background: url(../../components/thirdparty/yui-2.5.2/treeview/assets/sprite-nolines.gif) 0 -8000px no-repeat; 
+}
+
+.yui-skin-nolines .ygtvblankdepthcell { width:18px; height:18px; }
+
+/* the style of the div around each node */
+.yui-skin-nolines .ygtvitem { }  
+
+
+.yui-skin-nolines .ygtvitem  table{
+    margin-bottom:0;
+}
+.yui-skin-nolines .ygtvitem  td {
+    border:none;padding:0;
+} 
+
+/* the style of the div around each node's collection of children */
+.yui-skin-nolines .ygtvchildren {  }  
+* html .yui-skin-nolines .ygtvchildren { height:2%; }  
+
+/* the style of the text label in ygTextNode */
+.yui-skin-nolines .ygtvlabel, .yui-skin-nolines .ygtvlabel:link, .yui-skin-nolines .ygtvlabel:visited, .yui-skin-nolines .ygtvlabel:hover { 
+	margin-left:2px;
+	text-decoration: none;
+  background-color: white; /* workaround for IE font smoothing bug */
+}
+
+.yui-skin-nolines .ygtvspacer { height: 18px; width: 18px; }  /*#35368. Having the original width set to 12px caused the spacing to break. See the bug for screenshots. */  
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.2
+*/
+/* default space between tabs */
+.yui-navset .yui-nav li {
+    margin-right:0.5em; /* horizontal tabs */
+}
+.yui-navset-left .yui-nav li, .yui-navset-right .yui-nav li {
+    margin:0 0 0.5em; /* vertical tabs */
+}
+
+/* default width for side tabs */
+.yui-navset-left .yui-nav, .yui-navset-right .yui-nav { width:6em; }
+.yui-navset-left { padding-left:6em; } /* map to nav width */
+.yui-navset-right { padding-right:6em; } /* ditto */
+
+/* core */
+
+.yui-nav, .yui-nav li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.yui-navset li em { font-style:normal; }
+
+.yui-navset {
+    position:relative; /* contain absolute positioned tabs (left/right) */
+    zoom:1;
+}
+
+.yui-navset .yui-content { zoom:1; }
+
+.yui-navset .yui-nav li {
+    display:inline-block;
+    display:-moz-inline-stack;
+    *display:inline; /* IE */
+    vertical-align:bottom; /* safari: for overlap */
+    cursor:pointer; /* gecko: due to -moz-inline-stack on anchor */
+    zoom:1; /* IE: kill space between horizontal tabs */
+}
+
+.yui-navset-left .yui-nav li, .yui-navset-right .yui-nav li {
+    display:block;
+}
+
+.yui-navset .yui-nav a {
+    outline:0; /* gecko: keep from shifting */
+}
+
+.yui-navset .yui-nav a { position:relative; } /* IE: to allow overlap */
+
+.yui-navset .yui-nav li a {
+    display:block;
+    display:inline-block;
+    vertical-align:bottom; /* safari: for overlap */
+    zoom:1;
+}
+
+.yui-navset-left .yui-nav li a, .yui-navset-right .yui-nav li a {
+    display:block;
+}
+
+.yui-navset-bottom .yui-nav li a {
+    vertical-align:text-top; /* for inline overlap (reverse for Op border bug) */
+}
+
+.yui-navset .yui-nav li a em { display:block; }
+
+/* position left and right oriented tabs */
+.yui-navset-left .yui-nav, .yui-navset-right .yui-nav { position:absolute; z-index:1; }
+.yui-navset-left .yui-nav { left:0; }
+.yui-navset-right .yui-nav { right:0; }
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.2
+*/
+.yui-navset .yui-nav li {
+    margin-right:0.16em; /* space between tabs */
+    padding-top:1px; /* gecko: make room for overflow */
+    zoom:1;
+}
+
+.yui-navset .yui-nav .selected { 
+    margin-bottom:-1px; /* for overlap */
+}
+
+.yui-navset .yui-nav a {
+    background:#dadbdb url(../../assets/skins/sam/sprite.png) repeat-x; /* sprite position for normal gradient */
+    border:solid #a3a3a3;
+    border-width:0 1px; 
+    color:#000;
+    text-decoration:none;
+}
+
+.yui-navset .yui-nav li a em {
+    border-top:solid 1px #a3a3a3;
+    border-bottom:0;
+    cursor:hand;
+    padding:0.2em 0.5em;
+    top:-1px; /* for 1px rounded corners */
+    position:relative;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav a:focus,
+.yui-navset .yui-nav a:hover {
+    background:#214197 url(../../assets/skins/sam/sprite.png) repeat-x left -1400px;
+    color:#fff;
+}
+
+.yui-navset .yui-nav .selected a em {
+    padding:0.3em 0.5em; /* raise selected tab */
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    border-color:#243356;
+}
+
+.yui-navset .yui-nav a:hover em,
+.yui-navset .yui-nav a:focus em,
+.yui-navset .yui-nav .selected a em {
+    border-color:#233356 #406ed9;
+}
+
+.yui-navset .yui-nav {
+    border-bottom:1px solid #243356;
+    position:relative;
+    zoom:1;
+}
+
+.yui-navset .yui-content {
+    background:#abceff;
+    border-top:5px solid #214095;
+}
+
+.yui-navset .yui-content div {
+    border:1px solid #808080;
+    border-top-color:#243356;
+    padding:0.25em 0.5em;
+}
+
+.yui-navset .yui-content div div { /* kill inheritance */
+    border:0; 
+    padding:0;
+}
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.2
+*/
+.yuimenubar{visibility:visible;position:static;}.yuimenu .yuimenu,.yuimenubar .yuimenu{visibility:hidden;position:absolute;top:-10000px;left:-10000px;}.yuimenubar li,.yuimenu li{list-style-type:none;}.yuimenubar ul,.yuimenu ul,.yuimenubar li,.yuimenu li,.yuimenu h6,.yuimenubar h6{margin:0;padding:0;}.yuimenuitemlabel,.yuimenubaritemlabel{text-align:left;white-space:nowrap;}.yuimenubar ul{*zoom:1;}.yuimenubar .yuimenu ul{*zoom:normal;}.yuimenubar>.bd>ul:after{content:".";display:block;clear:both;visibility:hidden;height:0;line-height:0;}.yuimenubaritem{float:left;}.yuimenubaritemlabel,.yuimenuitemlabel{display:block;}.yuimenuitemlabel .helptext{font-style:normal;display:block;margin:-1em 0 0 10em;}.yui-menu-shadow{position:absolute;visibility:hidden;z-index:-1;}.yui-menu-shadow-visible{top:2px;right:-3px;left:-3px;bottom:-3px;visibility:visible;}.hide-scrollbars *{overflow:hidden;}.hide-scrollbars select{display:none;}.yuimenu.show-scrollbars,.yuimenubar.show-scrollbars{overflow:visible;}.yuimenu.hide-scrollbars .yui-menu-shadow,.yuimenubar.hide-scrollbars .yui-menu-shadow{overflow:hidden;}.yuimenu.show-scrollbars .yui-menu-shadow,.yuimenubar.show-scrollbars .yui-menu-shadow{overflow:auto;}.yui-skin-sam .yuimenubar{font-size:93%;line-height:2;*line-height:1.9;border:solid 1px #808080;background:url(../../components/thirdparty/yui-2.5.2/assets/skins/sam/sprite.png) repeat-x 0 0;}.yui-skin-sam .yuimenubarnav .yuimenubaritem{border-right:solid 1px #ccc;}.yui-skin-sam .yuimenubaritemlabel{padding:0 10px;color:#000;text-decoration:none;cursor:default;border-style:solid;border-color:#808080;border-width:1px 0;*position:relative;margin:-1px 0;}.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel{padding-right:20px;*display:inline-block;}.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel-hassubmenu{background:url(menubaritem_submenuindicator.png) right center no-repeat;}.yui-skin-sam .yuimenubaritem-selected{background:url(../../components/thirdparty/yui-2.5.2/assets/skins/sam/sprite.png) repeat-x 0 -1700px;}.yui-skin-sam .yuimenubaritemlabel-selected{border-color:#7D98B8;}.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel-selected{border-left-width:1px;margin-left:-1px;*left:-1px;}.yui-skin-sam .yuimenubaritemlabel-disabled{cursor:default;color:#A6A6A6;}.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel-hassubmenu-disabled{background-image:url(menubaritem_submenuindicator_disabled.png);}.yui-skin-sam .yuimenu{font-size:93%;line-height:1.5;*line-height:1.45;}.yui-skin-sam .yuimenubar .yuimenu,.yui-skin-sam .yuimenu .yuimenu{font-size:100%;}.yui-skin-sam .yuimenu .bd{border:solid 1px #808080;background-color:#fff;min-width:120px;}.yui-skin-sam .yuimenu ul{border-width:1px 0 0 0;border-color:#ccc;border-style:solid;}.yui-skin-sam .yuimenu ul.first-of-type{border-width:0;}.yui-skin-sam .yuimenu h6{font-weight:bold;border-style:solid;border-color:#ccc;border-width:1px 0 0 0;color:#a4a4a4;padding:3px 10px 0 10px;}.yui-skin-sam .yuimenu ul.hastitle,.yui-skin-sam .yuimenu h6.first-of-type{border-width:0;}.yui-skin-sam .yuimenu .yui-menu-body-scrolled{border-color:#ccc #808080;overflow:hidden;}.yui-skin-sam .yuimenu .topscrollbar,.yui-skin-sam .yuimenu .bottomscrollbar{height:16px;border:solid 1px #808080;background:#fff url(../../components/thirdparty/yui-2.5.2/assets/skins/sam/sprite.png) no-repeat 0 0;}.yui-skin-sam .yuimenu .topscrollbar{border-bottom-width:0;background-position:center -950px;}.yui-skin-sam .yuimenu .topscrollbar_disabled{background-position:center -975px;}.yui-skin-sam .yuimenu .bottomscrollbar{border-top-width:0;background-position:center -850px;}.yui-skin-sam .yuimenu .bottomscrollbar_disabled{background-position:center -875px;}.yui-skin-sam .yuimenuitem{_border-bottom:solid 1px #fff;}.yui-skin-sam .yuimenuitemlabel{padding:0 20px;color:#000;text-decoration:none;cursor:default;}.yui-skin-sam .yuimenuitemlabel .helptext{margin-top:-1.5em;*margin-top:-1.45em;}.yui-skin-sam .yuimenuitem-hassubmenu{background-image:url(menuitem_submenuindicator.png);background-position:right center;background-repeat:no-repeat;}.yui-skin-sam .yuimenuitem-checked{background-image:url(menuitem_checkbox.png);background-position:left center;background-repeat:no-repeat;}.yui-skin-sam .yui-menu-shadow-visible{background-color:#000;opacity:.12;*filter:alpha(opacity=12);}.yui-skin-sam .yuimenuitem-selected{background-color:#B3D4FF;}.yui-skin-sam .yuimenuitemlabel-disabled{cursor:default;color:#A6A6A6;}.yui-skin-sam .yuimenuitem-hassubmenu-disabled{background-image:url(menuitem_submenuindicator_disabled.png);}.yui-skin-sam .yuimenuitem-checked-disabled{background-image:url(menuitem_checkbox_disabled.png);}
+/*
+  For a "Map" of how the Menu component is structured, please see
+  http://developer.yahoo.com/yui/menu/#skinref
+  */
+
+.yuimenu .bd{
+  padding: 0;
+}
+
+.yuimenu .yuimenuitemlabel{
+  padding: .1em;
+}
+
+.yuimenu .yuimenuitem {
+  padding: .05em .8em;
+  margin: 0;
+}
+
+.yuimenu .dividerContainer {
+  padding:0 .8em;
+}
+
+.yuimenu ul {
+  padding: 0;
+}
+/*
+  For a "Map" of how the Menu component is structured, please see
+  http://developer.yahoo.com/yui/menu/#skinref
+  */
+.yuimenu h6 {
+  font-size: 1.05em;
+  color: #555;
+  font-style: italic;
+  font-weight: normal;
+  cursor: default;
+}
+
+.yuimenu .bd{
+  border: 1px solid #a8d8eb;
+}
+
+.yuimenu ul{
+  border-color: #8FA5BB;
+}
+
+.yuimenu .yuimenuitemlabel{
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+.yuimenu .yuimenuitem-selected .yuimenuitemlabel{
+  color: #000;
+}
+
+.yuimenu .yuimenuitem-selected {
+  border-top:1px solid #a8d8eb !important;
+  border-bottom:1px solid #a8d8eb !important;
+  color: #000;
+}
+
+.yuimenu .yuimenuitem {
+  border-top:1px solid #fff;
+  border-bottom:1px solid #fff;
+  color: #000;
+}
+
+.yuimenu .menuDivider {
+  border-top: 1px solid #8FA5BB;
+}
+/**
+ * The file contains styles for GWT widgets in the standard theme.
+ *
+ * In order to maintain cross-browser compatibility, the following syntax is
+ * used to create IE6 specific style rules:
+ *    .gwt-Widget {
+ *      property: rule applies to all browsers
+ *      -property: rule applies only to IE6 (overrides previous rule)
+ *    }
+ *    * html .gwt-Widget {
+ *      property: rule applies to all versions of IE
+ *    }
+ */
+
+/*
+#39957
+Prevent GWT global css in standard.css from overriding our rules.
+http://code.google.com/p/google-web-toolkit/issues/detail?id=3932
+
+body, table td, select {
+  font-family: Arial Unicode MS, Arial, sans-serif;
+  font-size: small;
+}
+pre {
+  font-family: "courier new", courier;
+  font-size: small;
+}
+body {
+  color: black;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  background: #fff;
+  direction: ltr;
+}
+a, a:visited, a:hover {
+  color: #0000AA;
+}
+*/
+
+/**
+ * The reference theme can be used to determine when this style sheet has
+ * loaded.  Create a hidden div element with absolute position, assign the style
+ * name below, and attach it to the DOM.  Use a timer to detect when the
+ * element's height and width are set to 5px.
+ */
+.gwt-Reference-standard {
+  height: 5px;
+  width: 5px;
+  zoom: 1;
+}
+
+.gwt-Button {
+  margin: 0;
+  padding: 3px 5px;
+  text-decoration: none;
+  font-size: small;
+  cursor: pointer;
+  cursor: hand;
+  background: url("images/hborder.png") repeat-x 0px -27px;
+  border: 1px outset #ccc;
+}
+.gwt-Button:active {
+  border: 1px inset #ccc;
+}
+.gwt-Button:hover {
+  border-color: #9cf #69e #69e #7af;
+}
+.gwt-Button[disabled] {
+  cursor: default;
+  color: #888;
+}
+.gwt-Button[disabled]:hover {
+  border: 1px outset #ccc;
+}
+
+.gwt-CheckBox {
+}
+.gwt-CheckBox-disabled {
+  color: #888;
+}
+
+.gwt-DecoratorPanel {
+}
+.gwt-DecoratorPanel .topCenter,
+.gwt-DecoratorPanel .bottomCenter {
+  background: url(images/hborder.png) repeat-x;
+}
+.gwt-DecoratorPanel .middleLeft,
+.gwt-DecoratorPanel .middleRight {
+  background: url(images/vborder.png) repeat-y;
+}
+.gwt-DecoratorPanel .topLeftInner,
+.gwt-DecoratorPanel .topRightInner,
+.gwt-DecoratorPanel .bottomLeftInner,
+.gwt-DecoratorPanel .bottomRightInner {
+  width: 5px;
+  height: 5px;
+  zoom: 1;
+}
+.gwt-DecoratorPanel .topLeft {
+  background: url(images/corner.png) no-repeat 0px 0px;
+  -background: url(images/corner_ie6.png) no-repeat 0px 0px;
+}
+.gwt-DecoratorPanel .topRight {
+  background: url(images/corner.png) no-repeat -5px 0px;
+  -background: url(images/corner_ie6.png) no-repeat -5px 0px;
+}
+.gwt-DecoratorPanel .bottomLeft {
+  background: url(images/corner.png) no-repeat 0px -5px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -5px;
+}
+.gwt-DecoratorPanel .bottomRight {
+  background: url(images/corner.png) no-repeat -5px -5px;
+  -background: url(images/corner_ie6.png) no-repeat -5px -5px;
+}
+* html .gwt-DecoratorPanel .topLeftInner,
+* html .gwt-DecoratorPanel .topRightInner,
+* html .gwt-DecoratorPanel .bottomLeftInner,
+* html .gwt-DecoratorPanel .bottomRightInner {
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+}
+
+.gwt-DialogBox .Caption {
+  background: #e3e8f3 url(images/hborder.png) repeat-x 0px -2003px;
+  padding: 4px 4px 4px 8px;
+  cursor: default;
+  border-bottom: 1px solid #bbbbbb;
+  border-top: 5px solid #d0e4f6;
+}
+.gwt-DialogBox .dialogContent {
+}
+.gwt-DialogBox .dialogMiddleCenter {
+  padding: 3px;
+  background: white;
+}
+.gwt-DialogBox .dialogBottomCenter {
+  background: url(images/hborder.png) repeat-x 0px -4px;
+  -background: url(images/hborder_ie6.png) repeat-x 0px -4px;
+}
+.gwt-DialogBox .dialogMiddleLeft {
+  background: url(images/vborder.png) repeat-y;
+}
+.gwt-DialogBox .dialogMiddleRight {
+  background: url(images/vborder.png) repeat-y -4px 0px;
+  -background: url(images/vborder_ie6.png) repeat-y -4px 0px;
+}
+.gwt-DialogBox .dialogTopLeftInner {
+  width: 5px;
+  zoom: 1;
+}
+.gwt-DialogBox .dialogTopRightInner {
+  width: 8px;
+  zoom: 1;
+}
+.gwt-DialogBox .dialogBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-DialogBox .dialogBottomRightInner {
+  width: 5px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-DialogBox .dialogTopLeft {
+  background: url(images/corner.png) no-repeat -13px 0px;
+  -background: url(images/corner_ie6.png) no-repeat -13px 0px;
+}
+.gwt-DialogBox .dialogTopRight {
+  background: url(images/corner.png) no-repeat -18px 0px;
+  -background: url(images/corner_ie6.png) no-repeat -18px 0px;
+}
+.gwt-DialogBox .dialogBottomLeft {
+  background: url(images/corner.png) no-repeat 0px -15px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -15px;
+}
+.gwt-DialogBox .dialogBottomRight {
+  background: url(images/corner.png) no-repeat -5px -15px;
+  -background: url(images/corner_ie6.png) no-repeat -5px -15px;
+}
+* html .gwt-DialogBox .dialogTopLeftInner {
+  width: 5px;
+  overflow: hidden;
+}
+* html .gwt-DialogBox .dialogTopRightInner {
+  width: 8px;
+  overflow: hidden;
+}
+* html .gwt-DialogBox .dialogBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  overflow: hidden;
+}
+* html .gwt-DialogBox .dialogBottomRightInner {
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.gwt-DisclosurePanel {
+}
+.gwt-DisclosurePanel-open {
+}
+.gwt-DisclosurePanel-closed {
+}
+.gwt-DisclosurePanel .header,
+.gwt-DisclosurePanel .header a,
+.gwt-DisclosurePanel .header td {
+  text-decoration: none;  /* Remove underline from header */
+  color: black;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-DisclosurePanel .content {
+  border-left: 3px solid #e8eef7;
+  padding: 4px 0px 4px 8px;
+  margin-left: 6px;
+}
+
+.gwt-FileUpload {
+}
+
+.gwt-Frame {
+  border-top: 2px solid #666;
+  border-left: 2px solid #666;
+  border-right: 2px solid #bbb;
+  border-bottom: 2px solid #bbb;
+}
+
+.gwt-HorizontalSplitPanel {
+}
+.gwt-HorizontalSplitPanel .hsplitter {
+  cursor: move;
+  border: 0px;
+  background: #91c0ef url(images/vborder.png) repeat-y;
+}
+.gwt-VerticalSplitPanel {
+}
+.gwt-VerticalSplitPanel .vsplitter {
+  cursor: move;
+  border: 0px;
+  background: #91c0ef url(images/hborder.png) repeat-x;
+}
+
+.gwt-HTML {
+}
+
+.gwt-Hyperlink {
+}
+
+.gwt-Image {
+}
+
+.gwt-Label {
+}
+
+.gwt-ListBox {
+}
+
+.gwt-MenuBar {
+  cursor: default;
+}
+.gwt-MenuBar .gwt-MenuItem {
+  cursor: default;
+}
+.gwt-MenuBar .gwt-MenuItem-selected {
+  background: #E0EDFE;
+}
+.gwt-MenuBar-horizontal {
+  background: #e3e8f3 url(images/hborder.png) repeat-x 0px -2003px;
+  border: 1px solid #BBBBBB;
+}
+.gwt-MenuBar-horizontal .gwt-MenuItem {
+  padding: 0px 10px;
+  vertical-align: bottom;
+  color: #666666;
+  font-weight: bold;
+}
+.gwt-MenuBar-horizontal .gwt-MenuItemSeparator {
+  width: 1px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  border-left: 1px solid #888888;
+  background: white;
+}
+.gwt-MenuBar-horizontal .gwt-MenuItemSeparator .menuSeparatorInner {
+  width: 1px;
+  height: 1px;
+  background: white;
+}
+.gwt-MenuBar-vertical {
+  margin-top: 0px;
+  margin-left: 0px;
+  background: white;
+}
+.gwt-MenuBar-vertical table {
+  border-collapse: collapse;
+}
+.gwt-MenuBar-vertical .gwt-MenuItem {
+  padding: 4px 14px 4px 1px;
+}
+.gwt-MenuBar-vertical .gwt-MenuItemSeparator {
+  padding: 2px 0px;
+}
+.gwt-MenuBar-vertical .gwt-MenuItemSeparator .menuSeparatorInner {
+  height: 1px;
+  padding: 0px;
+  border: 0px;
+  border-top: 1px solid #777777;
+  background: #ddddee;
+  overflow: hidden;
+}
+.gwt-MenuBar-vertical .subMenuIcon {
+  padding-right: 4px;
+}
+.gwt-MenuBar-vertical .subMenuIcon-selected {
+  background: #E0EDFE;
+}
+.gwt-MenuBarPopup {
+  margin: 0px 0px 0px 3px;
+}
+.gwt-MenuBarPopup .menuPopupTopCenter {
+  background: url(images/hborder.png) 0px -12px repeat-x;
+}
+.gwt-MenuBarPopup .menuPopupBottomCenter {
+  background: url(images/hborder.png) 0px -13px repeat-x;
+  -background: url(images/hborder_ie6.png) 0px -13px repeat-x;
+}
+.gwt-MenuBarPopup .menuPopupMiddleLeft {
+  background: url(images/vborder.png) -12px 0px repeat-y;
+  -background: url(images/vborder_ie6.png) -12px 0px repeat-y;
+}
+.gwt-MenuBarPopup .menuPopupMiddleRight {
+  background: url(images/vborder.png) -13px 0px repeat-y;
+  -background: url(images/vborder_ie6.png) -13px 0px repeat-y;
+}
+.gwt-MenuBarPopup .menuPopupTopLeftInner {
+  width: 5px;
+  height: 5px;
+  zoom: 1;
+}
+.gwt-MenuBarPopup .menuPopupTopRightInner {
+  width: 8px;
+  height: 5px;
+  zoom: 1;
+}
+.gwt-MenuBarPopup .menuPopupBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-MenuBarPopup .menuPopupBottomRightInner {
+  width: 8px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-MenuBarPopup .menuPopupTopLeft {
+  background: url(images/corner.png) no-repeat 0px -36px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -36px;
+}
+.gwt-MenuBarPopup .menuPopupTopRight {
+  background: url(images/corner.png) no-repeat -5px -36px;
+  -background: url(images/corner_ie6.png) no-repeat -5px -36px;
+}
+.gwt-MenuBarPopup .menuPopupBottomLeft {
+  background: url(images/corner.png) no-repeat 0px -41px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -41px;
+}
+.gwt-MenuBarPopup .menuPopupBottomRight {
+  background: url(images/corner.png) no-repeat -5px -41px;
+  -background: url(images/corner_ie6.png) no-repeat -5px -41px;
+}
+* html .gwt-MenuBarPopup .menuPopupTopLeftInner {
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+}
+* html .gwt-MenuBarPopup .menuPopupTopRightInner {
+  width: 8px;
+  height: 5px;
+  overflow: hidden;
+}
+* html .gwt-MenuBarPopup .menuPopupBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  overflow: hidden;
+}
+* html .gwt-MenuBarPopup .menuPopupBottomRightInner {
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.gwt-PasswordTextBox {
+  padding: 2px;
+}
+.gwt-PasswordTextBox-readonly {
+  color: #888;
+}
+
+.gwt-PopupPanel {
+  border: 3px solid #C3D9FF;
+  padding: 3px;
+  background: white;
+}
+
+.gwt-DecoratedPopupPanel .popupContent {
+}
+.gwt-DecoratedPopupPanel .popupMiddleCenter {
+  padding: 3px;
+  background: #d0e4f6;
+}
+.gwt-DecoratedPopupPanel .popupTopCenter {
+  background: url(images/hborder.png) repeat-x;
+}
+.gwt-DecoratedPopupPanel .popupBottomCenter {
+  background: url(images/hborder.png) repeat-x 0px -4px;
+  -background: url(images/hborder_ie6.png) repeat-x 0px -4px;
+}
+.gwt-DecoratedPopupPanel .popupMiddleLeft {
+  background: url(images/vborder.png) repeat-y;
+}
+.gwt-DecoratedPopupPanel .popupMiddleRight {
+  background: url(images/vborder.png) repeat-y -4px 0px;
+  -background: url(images/vborder_ie6.png) repeat-y -4px 0px;
+}
+.gwt-DecoratedPopupPanel .popupTopLeftInner {
+  width: 5px;
+  height: 5px;
+  zoom: 1;
+}
+.gwt-DecoratedPopupPanel .popupTopRightInner {
+  width: 8px;
+  height: 5px;
+  zoom: 1;
+}
+.gwt-DecoratedPopupPanel .popupBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-DecoratedPopupPanel .popupBottomRightInner {
+  width: 8px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-DecoratedPopupPanel .popupTopLeft {
+  background: url(images/corner.png) no-repeat 0px -10px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -10px;
+}
+.gwt-DecoratedPopupPanel .popupTopRight {
+  background: url(images/corner.png) no-repeat -5px -10px;
+  -background: url(images/corner_ie6.png) no-repeat -5px -10px;
+}
+.gwt-DecoratedPopupPanel .popupBottomLeft {
+  background: url(images/corner.png) no-repeat 0px -15px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -15px;
+}
+.gwt-DecoratedPopupPanel .popupBottomRight {
+  background: url(images/corner.png) no-repeat -5px -15px;
+  -background: url(images/corner_ie6.png) no-repeat -5px -15px;
+}
+* html .gwt-DecoratedPopupPanel .popupTopLeftInner {
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+}
+* html .gwt-DecoratedPopupPanel .popupTopRightInner {
+  width: 8px;
+  height: 5px;
+  overflow: hidden;
+}
+* html .gwt-DecoratedPopupPanel .popupBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  overflow: hidden;
+}
+* html .gwt-DecoratedPopupPanel .popupBottomRightInner {
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.gwt-PopupPanelGlass {
+  background-color: #000;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.gwt-PushButton-up,
+.gwt-PushButton-up-hovering,
+.gwt-PushButton-up-disabled,
+.gwt-PushButton-down,
+.gwt-PushButton-down-hovering,
+.gwt-PushButton-down-disabled {
+  margin: 0;
+  text-decoration: none;
+  background: url("images/hborder.png") repeat-x 0px -27px;
+}
+.gwt-PushButton-up,
+.gwt-PushButton-up-hovering,
+.gwt-PushButton-up-disabled {
+  padding: 3px 5px 3px 5px;
+}
+.gwt-PushButton-up {
+  border: 1px outset #ccc;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-PushButton-up-hovering {
+  border: 1px outset;
+  border-color: #9cf #69e #69e #7af;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-PushButton-up-disabled {
+  border: 1px outset #ccc;
+  cursor: default;
+  opacity: .5;
+  filter: alpha(opacity=40);
+  zoom: 1;
+}
+.gwt-PushButton-down,
+.gwt-PushButton-down-hovering,
+.gwt-PushButton-down-disabled {
+  padding: 4px 4px 2px 6px;
+}
+.gwt-PushButton-down {
+  border: 1px inset #666;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-PushButton-down-hovering {
+  border: 1px inset;
+  border-color: #9cf #69e #69e #7af;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-PushButton-down-disabled {
+  border: 1px outset #ccc;
+  cursor: default;
+  opacity: 0.5;
+  filter: alpha(opacity=40);
+  zoom: 1;
+}
+
+.gwt-RadioButton {
+}
+.gwt-RadioButton-disabled {
+  color: #888;
+}
+
+.gwt-RichTextArea {
+}
+.hasRichTextToolbar {
+  border: 0px;
+}
+.gwt-RichTextToolbar {
+  background: #e3e8f3 url(images/hborder.png) repeat-x 0px -2003px;
+  border-bottom: 1px solid #BBBBBB;
+  padding: 3px;
+  margin: 0px;
+}
+.gwt-RichTextToolbar .gwt-PushButton-up {
+  padding: 0px 1px 0px 0px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-PushButton-up-hovering {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 1px 0px 0px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-PushButton-down {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 0px 0px 1px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-PushButton-down-hovering {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 0px 0px 1px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-ToggleButton-up {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 1px 0px 0px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-ToggleButton-up-hovering {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 1px 0px 0px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-ToggleButton-down {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 0px 0px 1px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-ToggleButton-down-hovering {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 0px 0px 1px;
+  border-width: 1px;
+}
+
+.gwt-StackPanel {
+  border-bottom: 1px solid #bbbbbb;
+}
+.gwt-StackPanel .gwt-StackPanelItem {
+  cursor: pointer;
+  cursor: hand;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 3px;
+  border: 1px solid #bbbbbb;
+  border-bottom: 0px;
+  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+}
+.gwt-StackPanel .gwt-StackPanelContent {
+  border: 1px solid #bbbbbb;
+  border-bottom: 0px;
+  background: white;
+  padding: 2px 2px 10px 5px;
+}
+
+.gwt-DecoratedStackPanel {
+  border-bottom: 1px solid #bbbbbb;
+}
+.gwt-DecoratedStackPanel .gwt-StackPanelContent {
+  border: 1px solid #bbbbbb;
+  border-bottom: 0px;
+  background: white;
+  padding: 2px 2px 10px 5px;
+}
+.gwt-DecoratedStackPanel .gwt-StackPanelItem {
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-DecoratedStackPanel .stackItemTopLeft,
+.gwt-DecoratedStackPanel .stackItemTopRight {
+  height: 6px;
+  width: 6px;
+  zoom: 1;
+}
+.gwt-DecoratedStackPanel .stackItemTopLeft {
+  border-left: 1px solid #bbbbbb;
+  background: #d3def6 url(images/corner.png) no-repeat 0px -49px;
+  -background: #d3def6 url(images/corner_ie6.png) no-repeat 0px -49px;
+}
+.gwt-DecoratedStackPanel .stackItemTopRight {
+  border-right: 1px solid #bbbbbb;
+  background: #d3def6 url(images/corner.png) no-repeat -6px -49px;
+  -background: #d3def6 url(images/corner_ie6.png) no-repeat -6px -49px;
+}
+.gwt-DecoratedStackPanel .stackItemTopLeftInner,
+.gwt-DecoratedStackPanel .stackItemTopRightInner {
+  width: 1px;
+  height: 1px;
+}
+* html .gwt-DecoratedStackPanel .stackItemTopLeftInner,
+* html .gwt-DecoratedStackPanel .stackItemTopRightInner {
+  width: 6px;
+  height: 6px;
+  overflow: hidden;
+}
+.gwt-DecoratedStackPanel .stackItemTopCenter {
+  background: url(images/hborder.png) 0px -21px repeat-x;
+}
+.gwt-DecoratedStackPanel .stackItemMiddleLeft {
+  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+  border-left: 1px solid #bbbbbb;
+}
+.gwt-DecoratedStackPanel .stackItemMiddleLeftInner,
+.gwt-DecoratedStackPanel .stackItemMiddleRightInner {
+  width: 1px;
+  height: 1px;
+}
+.gwt-DecoratedStackPanel .stackItemMiddleRight {
+  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+  border-right: 1px solid #bbbbbb;
+}
+.gwt-DecoratedStackPanel .stackItemMiddleCenter {
+  font-weight: bold;
+  font-size: 1.3em;
+  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+}
+.gwt-DecoratedStackPanel .gwt-StackPanelItem-first .stackItemTopRight,
+.gwt-DecoratedStackPanel .gwt-StackPanelItem-first .stackItemTopLeft {
+  border: 0px;
+  background-color: white;
+}
+.gwt-DecoratedStackPanel .gwt-StackPanelItem-below-selected .stackItemTopLeft,
+.gwt-DecoratedStackPanel .gwt-StackPanelItem-below-selected .stackItemTopRight {
+  background-color: white;
+}
+
+.gwt-SuggestBox {
+  padding: 2px;
+}
+.gwt-SuggestBoxPopup {
+  margin-left: 3px;
+}
+.gwt-SuggestBoxPopup .item {
+  padding: 2px 6px;
+  color: #424242;
+  cursor: default;
+}
+.gwt-SuggestBoxPopup .item-selected {
+  background: #b7d6f6;
+}
+.gwt-SuggestBoxPopup .suggestPopupContent {
+  background: white;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopCenter {
+  background: url(images/hborder.png) repeat-x;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomCenter {
+  background: url(images/hborder.png) repeat-x 0px -4px;
+  -background: url(images/hborder_ie6.png) repeat-x 0px -4px;
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeft {
+  background: url(images/vborder.png) repeat-y;
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleRight {
+  background: url(images/vborder.png) repeat-y -4px 0px;
+  -background: url(images/vborder_ie6.png) repeat-y -4px 0px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+  width: 5px;
+  height: 5px;
+  zoom: 1;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+  width: 8px;
+  height: 5px;
+  zoom: 1;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+  width: 8px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopLeft {
+  background: url(images/corner.png) no-repeat 0px -23px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -23px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopRight {
+  background: url(images/corner.png) no-repeat -5px -23px;
+  -background: url(images/corner_ie6.png) no-repeat -5px -23px;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomLeft {
+  background: url(images/corner.png) no-repeat 0px -28px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -28px;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomRight {
+  background: url(images/corner.png) no-repeat -5px -28px;
+  -background: url(images/corner_ie6.png) no-repeat -5px -28px;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+  width: 8px;
+  height: 5px;
+  overflow: hidden;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  overflow: hidden;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.gwt-TabBar {
+}
+.gwt-TabBar .gwt-TabBarFirst {
+  width: 5px;  /* first tab distance from the left */
+}
+.gwt-TabBar .gwt-TabBarRest {
+}
+.gwt-TabBar .gwt-TabBarItem {
+  margin-left: 6px;
+  padding: 3px 6px 3px 6px;
+  cursor: pointer;
+  cursor: hand;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background: #d0e4f6;
+}
+.gwt-TabBar .gwt-TabBarItem-selected {
+  cursor: default;
+  background: #92c1f0;
+}
+.gwt-TabBar .gwt-TabBarItem-disabled {
+  cursor: default;
+  color: #999999;
+}
+.gwt-TabPanel {
+}
+.gwt-TabPanelBottom {
+  border-color: #92c1f0;
+  border-style: solid;
+  border-width: 3px 2px 2px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.gwt-DecoratedTabBar {
+}
+.gwt-DecoratedTabBar .gwt-TabBarFirst {
+  width: 5px;  /* first tab distance from the left */
+}
+.gwt-DecoratedTabBar .gwt-TabBarRest {
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem {
+  border-collapse: collapse;
+  margin-left: 6px;
+}
+.gwt-DecoratedTabBar .tabTopCenter {
+  padding: 0px;
+  background: #d0e4f6;
+}
+.gwt-DecoratedTabBar .tabTopLeft,
+.gwt-DecoratedTabBar .tabTopRight {
+  padding: 0px;
+  zoom: 1;
+}
+.gwt-DecoratedTabBar .tabTopLeftInner,
+.gwt-DecoratedTabBar .tabTopRightInner {
+  width: 6px;
+  height: 6px;
+}
+.gwt-DecoratedTabBar .tabTopLeft {
+  background: url(images/corner.png) no-repeat 0px -55px;
+  -background: url(images/corner_ie6.png) no-repeat 0px -55px;
+}
+.gwt-DecoratedTabBar .tabTopRight {
+  background: url(images/corner.png) no-repeat -6px -55px;
+  -background: url(images/corner_ie6.png) no-repeat -6px -55px;
+}
+* html .gwt-DecoratedTabBar .tabTopLeftInner,
+* html .gwt-DecoratedTabBar .tabTopRightInner {
+  width: 6px;
+  height: 6px;
+  overflow: hidden;
+}
+.gwt-DecoratedTabBar .tabMiddleLeft,
+.gwt-DecoratedTabBar .tabMiddleRight {
+  width: 6px;
+  padding: 0px;
+  background: #d0e4f6;
+}
+.gwt-DecoratedTabBar .tabMiddleLeftInner,
+.gwt-DecoratedTabBar .tabMiddleRightInner {
+  width: 1px;
+  height: 1px;
+}
+.gwt-DecoratedTabBar .tabMiddleCenter {
+  padding: 0px 4px 2px 4px;
+  cursor: pointer;
+  cursor: hand;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background: #d0e4f6;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopCenter {
+  background: #92c1f0;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopLeft {
+  background-position: 0px -61px;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopRight {
+  background-position: -6px -61px;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleLeft,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleRight {
+  background: #92c1f0;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter {
+  cursor: default;
+  background: #92c1f0;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-disabled .tabMiddleCenter {
+  cursor: default;
+  color: #999999;
+}
+
+.gwt-TextArea {
+  padding: 2px;
+}
+.gwt-TextArea-readonly {
+  color: #888;
+}
+
+.gwt-TextBox {
+  padding: 2px;
+}
+.gwt-TextBox-readonly {
+  color: #888;
+}
+
+.gwt-ToggleButton-up,
+.gwt-ToggleButton-up-hovering,
+.gwt-ToggleButton-up-disabled,
+.gwt-ToggleButton-down,
+.gwt-ToggleButton-down-hovering,
+.gwt-ToggleButton-down-disabled {
+  margin: 0;
+  text-decoration: none;
+  background: url("images/hborder.png") repeat-x 0px -27px;
+}
+.gwt-ToggleButton-up,
+.gwt-ToggleButton-up-hovering,
+.gwt-ToggleButton-up-disabled {
+  padding: 3px 5px 3px 5px;
+}
+.gwt-ToggleButton-up {
+  border: 1px outset #ccc;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-ToggleButton-up-hovering {
+  border: 1px outset;
+  border-color: #9cf #69e #69e #7af;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-ToggleButton-up-disabled {
+  border: 1px outset #ccc;
+  cursor: default;
+  opacity: .5;
+  zoom: 1;
+  filter: alpha(opacity=40);
+}
+.gwt-ToggleButton-down,
+.gwt-ToggleButton-down-hovering,
+.gwt-ToggleButton-down-disabled {
+  padding: 4px 4px 2px 6px;
+}
+.gwt-ToggleButton-down {
+  background-position: 0 -513px;
+  border: 1px inset #ccc;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-ToggleButton-down-hovering {
+  background-position: 0 -513px;
+  border: 1px inset;
+  border-color: #9cf #69e #69e #7af;
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-ToggleButton-down-disabled {
+  background-position: 0 -513px;
+  border: 1px inset #ccc;
+  cursor: default;
+  opacity: .5;
+  zoom: 1;
+  filter: alpha(opacity=40);
+}
+
+.gwt-Tree .gwt-TreeItem {
+  padding: 1px 0px;
+  margin: 0px;
+  white-space: nowrap;
+/*  cursor: hand;
+  cursor: pointer; */
+}
+.gwt-Tree .gwt-TreeItem-selected {
+  background: #93c2f1 url(images/hborder.png) repeat-x 0px -1463px;
+}
+.gwt-TreeItem .gwt-RadioButton input,
+.gwt-TreeItem .gwt-CheckBox input {
+  margin-left: 0px;
+}
+* html .gwt-TreeItem .gwt-RadioButton input,
+* html .gwt-TreeItem .gwt-CheckBox input {
+  margin-left: -4px;
+}
+
+.gwt-DateBox input {
+  width: 8em;
+}
+.dateBoxFormatError {
+  background: #ffcccc;
+}
+.dateBoxPopup {
+}
+
+.gwt-DatePicker {
+  border: 1px solid #A2BBDD;
+  cursor: default;
+}
+.gwt-DatePicker td,
+.datePickerMonthSelector td:focus {
+  outline: none
+}
+.datePickerDays {
+  width: 100%;
+  background: white;
+}
+.datePickerDay,
+.datePickerWeekdayLabel,
+.datePickerWeekendLabel {
+  font-size: 75%;
+  text-align: center;
+  padding: 4px;
+  outline: none;
+}
+.datePickerWeekdayLabel,
+.datePickerWeekendLabel {
+  background: #C3D9FF;
+  padding: 0px 4px 2px;
+  cursor: default;
+}
+.datePickerDay {
+  padding: 4px;
+  cursor: hand;
+  cursor: pointer;
+}
+.datePickerDayIsToday {
+  border: 1px solid black;
+  padding: 3px;
+}
+.datePickerDayIsWeekend {
+  background: #EEEEEE;
+}
+.datePickerDayIsFiller {
+  color: #888888;
+}
+.datePickerDayIsValue {
+  background: #aaccee;
+}
+.datePickerDayIsDisabled {
+  color: #AAAAAA;
+  font-style: italic;
+}
+.datePickerDayIsHighlighted {
+  background: #F0E68C;
+}
+.datePickerDayIsValueAndHighlighted {
+  background: #bbddd9;
+}
+.datePickerMonthSelector {
+  background: #C3D9FF;
+  width: 100%;
+}
+td.datePickerMonth {
+  text-align: center;
+  vertical-align: center;
+  white-space: nowrap;
+  font-size: 70%;
+  font-weight: bold;
+  color: blue;
+}
+.datePickerPreviousButton,
+.datePickerNextButton {
+  font-size: 120%;
+  line-height: 1em;
+  color: blue;
+  cursor: hand;
+  cursor: pointer;
+  padding: 0px 4px;
+}
+
+.gwt-StackLayoutPanel {
+  border-bottom: 1px solid #bbbbbb;
+}
+.gwt-StackLayoutPanel .gwt-StackLayoutPanelHeader {
+  cursor: pointer;
+  cursor: hand;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 3px;
+  border: 1px solid #bbbbbb;
+  border-bottom: 0px;
+  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+}
+.gwt-StackLayoutPanel .gwt-StackLayoutPanelContent {
+  border: 1px solid #bbbbbb;
+  border-bottom: 0px;
+  background: white;
+  padding: 2px 2px 10px 5px;
+}
+
+.gwt-TabLayoutPanel {
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
+  border-color: #92c1f0;
+  border-style: solid;
+  border-width: 3px 2px 2px;
+  overflow: hidden;
+  padding: 6px;
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
+  margin-left: 6px;
+  padding: 3px 6px 3px 6px;
+  cursor: pointer;
+  cursor: hand;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background: #d0e4f6;
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+  cursor: default;
+  background: #92c1f0;
+}
+
+.gwt-SplitLayoutPanel-HDragger {
+  background: #d0e4f6 url(images/splitPanelThumb.png) center center no-repeat;
+  cursor: col-resize;
+}
+
+.gwt-SplitLayoutPanel-VDragger {
+  background: #d0e4f6 url(images/splitPanelThumb.png) center center no-repeat;
+  cursor: row-resize;
+}
+/*
+#40441
+
+Background images can't be in CSS files that are dynamically loaded since their starting path
+can't be guaranteed to be always the same.
+
+*/
+
+/*
+/admin/css/datatype.css
+*/
+.dtWarning {
+  background-image:url("../../components/toolbar/img/warning.gif"); 
+}
+
+.dtException {
+  background-image:url("../../components/toolbar/img/stop.gif");  
+}
+
+.dtInfo {
+  background-image:url("../../components/toolbar/img/info.gif");  
+}
+
+/*
+/admin/css/skins/calendar.css
+*/
+.calendarForm .nonworking{
+  background: url(../../components/img/calendar_nonworking-rept.gif) repeat; 
+}
+.calendarForm .nonworking.highlight{
+  background: #b4d0d6 url(../../components/img/calendar_nonworking-rept.gif) repeat; 
+}
+
+/*
+/forms/css/skins.css
+*/
+fieldset.conditionalInput{
+  background: url(../../forms/img/conditionalhidden.gif) top left repeat;
+}
+
+/*
+/forums/css/forums.css
+*/
+.asiGrid.forumGrid {
+  background-image: url('../../forums/img/bg.gif'); 
+  background-repeat: repeat-y;
+}
+
+.asiGrid.messageListGrid {
+  background-image: url('../../forums/img/bg.gif'); 
+  background-repeat: repeat-y;
+}
+
+/*
+/framework/css/skins/dialogSection.css
+*/
+.dialogSection h2{
+  background: url(../../components/dialogs/img/h1_bg.gif) top left  repeat-x;
+}
+.dialogSection h2 .instructions{
+  background: transparent url(../../components/toolbar/img/info.gif) left center no-repeat;
+}
+
+/* 
+/portlet/dt/css/skins/view.css 
+*/
+.forumsChannelMsgList th.ascending{
+  background: #bcd0d7 url(../../components/img/sort_asc.gif) 96% 50% no-repeat;
+}
+.forumsChannelMsgList th.descending{
+  background: #bcd0d7 url(../../components/img/sort_desc.gif) 96% 50% no-repeat;
+}
+
+/* /portlet/quicktask/css/skins/quickTaskPortlet.css */
+.quickTaskList.vertical ul li {
+  background: url(../../components/toolbar/img/quicktask.gif) no-repeat left center;
+}
+.quickTaskList.toolbar {
+  background: #EEEEEE url(../../components/img/toolbar_bg.gif) scroll bottom left repeat-x;
+}
+.quickTaskList.toolbar ul li a {
+  background: url(../../components/toolbar/img/9dots.gif) no-repeat left center;
+}
+.quickTaskList.toolbar ul li strong {
+  background: url(../../components/toolbar/img/9dots.gif) no-repeat left center;
+}
+.quickTaskList.toolbar ul li.disabledQT {
+  background: url(../../components/toolbar/img/9dots.gif) no-repeat left 25%;
+}
+
+/* 
+/rules/css/rules.css 
+*/
+#freeformRuleCreation.asiForm  fieldset .confirmValue{
+  background: url(../../rules/img/rule.gif) center left no-repeat;
+}
+
+/**
+YUI
+*/
+.yuimenu .yuimenuitem-selected {
+  background: white url(../../portal/img/dropdown_lightblue_hover.gif) repeat-x;
+}
